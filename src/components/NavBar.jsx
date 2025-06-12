@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <div className='w-full h-screen bg-gray-950 flex justify-center items-center'>
       <div className='bg-white max-h-[4.4rem] px-6 rounded-t-xl'>
-        <ul>
+        <ul className='flex relative'>
           {Menus.map((menu, i) => (
             <li key={i}>
               <a href='#'>
