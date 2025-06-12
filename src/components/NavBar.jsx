@@ -4,8 +4,8 @@ const NavBar = () => {
   const Menus = [
     { name: "Home", icon: "home-outline", dis: "translate-x-0" },
     { name: "Message", icon: "chatbubble-outline", dis: "translate-x-32" },
-    { name: "Favorites", icon: "person-outline", dis: "translate-x-16" },
-    { name: "Cart", icon: "camera-outline", dis: "translate-x-48" },
+    { name: "Favorites", icon: "heart-outline", dis: "translate-x-16" },
+    { name: "Cart", icon: "cart-outline", dis: "translate-x-48" },
     { name: "Settings", icon: "settings-outline", dis: "translate-x-64" },
   ];
 
@@ -20,7 +20,6 @@ const NavBar = () => {
               key={i}
               className='w-16'
             >
-              {active}
               <a
                 className='flex flex-col text-center '
                 onClick={() => setActive(i)}
@@ -28,7 +27,11 @@ const NavBar = () => {
                 <span className='text-xl cursor-pointer'>
                   <ion-icon name={menu.icon}></ion-icon>
                 </span>
-                <span className={` ${active === i ? "opacity-100" : "opacity-30"}`}>
+                <span
+                  className={` ${
+                    active === i ? "font-semibold duration-700 ease-in-out" : "font-normal"
+                  }`}
+                >
                   {menu.name}
                 </span>
               </a>
