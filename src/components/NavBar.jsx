@@ -22,13 +22,15 @@ const NavBar = () => {
             >
               {active}
               <a
-                className='flex flex-col text-center pt-6'
+                className='flex flex-col text-center '
                 onClick={() => setActive(i)}
               >
                 <span className='text-xl cursor-pointer'>
                   <ion-icon name={menu.icon}></ion-icon>
                 </span>
-                <span>{menu.name}</span>
+                <span className={` ${active === i ? "opacity-100" : "opacity-30"}`}>
+                  {menu.name}
+                </span>
               </a>
             </li>
           ))}
