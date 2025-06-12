@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 const NavBar = () => {
   const Menus = [
@@ -9,6 +9,8 @@ const NavBar = () => {
     { name: "Settings", icon: "settings-outline", dis: "translate-x-64" },
   ];
 
+  const [active, setActive] = useState(0);
+
   return (
     <div className='w-full h-screen bg-gray-950 flex justify-center items-center'>
       <div className='bg-white max-h-[4.4rem] px-6 rounded-t-xl'>
@@ -18,7 +20,11 @@ const NavBar = () => {
               key={i}
               className='w-16'
             >
-              <a className='flex flex-col text-center'>
+              {active}
+              <a
+                className='flex flex-col text-center pt-6'
+                onClick={() => setActive(i)}
+              >
                 <span className='text-xl cursor-pointer'>
                   <ion-icon name={menu.icon}></ion-icon>
                 </span>
