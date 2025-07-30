@@ -1,13 +1,10 @@
 import "./App.css";
-import BtnCTA from "./components/BtnCTA";
-import Login from "./components/Login";
-import NavBar from "./components/NavBar";
+import FeatherIcon from "feather-icons-react";
 
 function App() {
   return (
     <>
-      <Login />
-      <NavBar />
+      <FeatherIcon icon='copy' size='240' />
     </>
   );
 }
