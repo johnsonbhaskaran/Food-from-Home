@@ -3,7 +3,9 @@
 
 @theme {
   --font-urbanist: "Urbanist", sans-serif;
-  --color-*: initial;
+  /* --color-*: initial; */
+  --color-white: #ffffff;
+  --color-black: #000000;
   --color-brand-primary: #C140D7;
   --color-brand-secondary: #4A00E0;
   --color-brand-text-light: #7F7282;
