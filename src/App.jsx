@@ -1,10 +1,10 @@
 import "./App.css";
-import CustomerLogin from "./pages/customerPages/CustomerLogin";
+import LocationHome from "./pages/customerPages/LocationHome";
 
 function App() {
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light'>
-      <CustomerLogin />
+      <LocationHome />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import BtnTextLink from "../../components/commonComponents/BtnTextLink";
 const CustomerLogin = () => {
   return (
     <div className='flex flex-col justify-between min-h-screen'>
-      <div className='mx-auto mt-28'>
+      <div className='space-x-2 mx-auto mt-28'>
         {/* Sub Title */}
         <h2 className='inline-block bg-clip-text bg-gradient-to-r from-13% from-brand-secondary to-70% to-brand-primary font-bold text-transparent text-3xl'>
           Welcome back
@@ -23,7 +23,7 @@ const CustomerLogin = () => {
         </div>
         {/* Remember me */}
         <div className='flex justify-between my-2'>
-          <Checkbox />
+          <Checkbox text={"Remember me"} />
           <a href='#'>forgot password?</a>
         </div>
         {/* Sign in Btn */}

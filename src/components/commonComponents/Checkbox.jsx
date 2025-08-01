@@ -1,12 +1,12 @@
-const Checkbox = () => {
+const Checkbox = ({ text }) => {
   return (
     <div>
-      <label className='flex space-x-2'>
+      <label className='flex items-center space-x-2'>
         <input
           className='bg-brand-fore-dark checked:border rounded-sm size-4.5 checked:bg-brand-text-light appearance-none'
           type='checkbox'
         />
-        <p>Remember me</p>
+        <p>{text}</p>
       </label>
     </div>
   );

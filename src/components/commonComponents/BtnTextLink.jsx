@@ -10,7 +10,7 @@ const BtnTextLink = ({ text, iconSide }) => {
         </button>
       ) : (
         <button className='flex items-center cursor-pointer'>
-          <FeatherIcon className='mr-1' icon='user-check' size='16' />
+          <FeatherIcon className='mr-2' icon='user-check' size='16' />
           {text}
         </button>
       )}
