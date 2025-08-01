@@ -1,14 +1,14 @@
 import "./App.css";
-import FeatherIcon from "feather-icons-react";
-import ToggleIconContainer from "./ToggleIconContainer";
+import CustomerOnboarding_one from "./pages/commonPages/CustomerOnboarding_one.jsx";
+import CustomerOnboarding_two from "./pages/commonPages/CustomerOnboarding_two.jsx";
+import CustomerOnboarding_three from "./pages/commonPages/CustomerOnboarding_three.jsx";
 
 function App() {
   return (
-    <div className='bg-[#0E0A0F]'>
-      <h1 className='text-6xl'>Tittle</h1>
-      {/* <FeatherIcon icon='copy' size='240' /> */}
-      <FeatherIcon icon='heart' fill='red' size='240' />
-      <ToggleIconContainer />
+    <div className='bg-[#0E0A0F] font-urbanist'>
+      <CustomerOnboarding_one />
+      <CustomerOnboarding_two />
+      <CustomerOnboarding_three />
     </div>
   );
 }
