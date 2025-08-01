@@ -3,4 +3,17 @@
 
 @theme {
   --font-urbanist: "Urbanist", sans-serif;
+  --color-*: initial;
+  --color-brand-primary: #C140D7;
+  --color-brand-secondary: #4A00E0;
+  --color-brand-text-light: #7F7282;
+  --color-brand-text-dark: #514554;
+  --color-brand-bg-light: #F1E7F3;
+  --color-brand-bg-dark: #0E0A0F;
+  --color-brand-fore-light: #FDF5FF;
+  --color-brand-fore-dark: #1B171C;
+  --color-brand-notify-ON: #0ACC00;
+  --color-brand-notify-OFF: #CC0029;
+  --color-brand-notify-default: #CC4400;
+  --color-brand-btn-dark: #411F47;
 }

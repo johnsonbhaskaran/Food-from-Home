@@ -6,12 +6,14 @@ const CustomerOnboarding_two = () => {
   const Onboarding_screen = 2;
 
   return (
-    <div className='flex flex-col justify-center h-screen text-white text-center'>
+    <div className='flex flex-col justify-center min-h-screen text-brand-text-light text-center'>
       {/* Sub Title */}
       <div className='my-16'>
-        <h2 className='inline-block bg-clip-text bg-gradient-to-r from-[#4A00E0] from-13% to-[#C141D8] to-70% font-bold text-transparent text-3xl'>
-          <span className='block font-extralight text-white text-lg'>There are</span>700+ Chefs Pan
-          India
+        <h2 className='inline-block bg-clip-text bg-gradient-to-r from-13% from-brand-secondary to-70% to-brand-primary font-bold text-transparent text-3xl'>
+          <span className='block font-extralight text-brand-text-light text-lg tracking-wide'>
+            There are
+          </span>
+          700+ Chefs Pan India
         </h2>
       </div>
       {/* Onboarding Image 1 */}
@@ -25,7 +27,7 @@ const CustomerOnboarding_two = () => {
       {/* Title and Description */}
       <div className='mb-12'>
         <h1 className='font-bold text-4xl'>Select nearby Chefs</h1>
-        <p className='px-16 py-2 text-sm'>
+        <p className='px-16 py-2 text-sm tracking-wide'>
           Find out our curated and cherry picked Chefs around you. So now you have access to home
           made food within minutes reach.
         </p>
