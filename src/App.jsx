@@ -1,12 +1,12 @@
 import "./App.css";
 import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
-import CustomerAccountSettings from "./pages/customerPages/CustomerAccountSettings";
+import ChefStore from "./pages/customerPages/ChefStore";
 
 function App() {
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light'>
-      <CustomerAccountSettings />
-      <CustomerNavBar active={3} />
+      <ChefStore />
+      <CustomerNavBar active={1} />
     </div>
   );
 }
