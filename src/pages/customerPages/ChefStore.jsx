@@ -19,7 +19,7 @@ const ChefStore = () => {
         </div>
       </div>
       {/* Today's special */}
-      <div className='bg-brand-fore-dark mx-4 md:mx-auto mt-3 p-4 pr-0 rounded-xl md:w-fit text-center'>
+      <div className='bg-brand-fore-dark mx-4 mt-3 p-4 pr-0 rounded-xl text-center'>
         <h2 className='inline-block bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary mb-4 font-bold text-transparent text-3xl'>
           Today's special
         </h2>
@@ -28,7 +28,7 @@ const ChefStore = () => {
         </div>
       </div>
       {/* Category selection horizontal scroll text links */}
-      <div className='scrollbar-hidden bg-brand-fore-dark mx-4 md:mx-auto mt-3 p-4 rounded-xl md:w-fit overflow-x-auto'>
+      <div className='scrollbar-hidden bg-brand-fore-dark mx-4 mt-3 p-4 rounded-xl overflow-x-auto'>
         <HorizontalScrollTextLink />
       </div>
       {/* Filter & Sort */}
