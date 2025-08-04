@@ -16,7 +16,7 @@ const CustomerAccountSettings = () => {
       <div className='mx-6 mt-12'>
         <p className='text-xl'>Welcome, {customer.name}</p>
       </div>
-      <div className='space-y-1 mx-6 mt-8'>
+      <div className='space-y-1 mx-6 mt-4'>
         <InputField value={customer.name} type={"text"} />
         <InputField value={"Password"} type={"password"} />
         <InputField value={"Contact number"} type={"tel"} />
