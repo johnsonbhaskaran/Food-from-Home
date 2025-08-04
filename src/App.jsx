@@ -1,6 +1,5 @@
 import "./App.css";
 import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
-import IndicatorDotBrandColor from "./components/commonComponents/IndicatorDotBrandColor";
 import CustomerAccountSettings from "./pages/customerPages/CustomerAccountSettings";
 
 function App() {
