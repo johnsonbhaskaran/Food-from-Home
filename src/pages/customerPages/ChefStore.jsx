@@ -2,6 +2,8 @@ import ChefProfilePicMedium from "../../assets/store-chef-profile-pic-80px.png";
 import ChefProfileBannerMobile from "../../assets/store-chef-profile-banner-mobile.png";
 import HorizontalScrollCircularImage from "../../components/commonComponents/HorizontalScrollCircularImage";
 import HorizontalScrollTextLink from "../../components/commonComponents/HorizontalScrollTextLink";
+import BtnTransparentWithIcon from "../../components/commonComponents/BtnTransparentWithIcon";
+import FoodItemCardMax from "../../components/commonComponents/FoodItemCardMax";
 
 const ChefStore = () => {
   return (
@@ -32,7 +34,23 @@ const ChefStore = () => {
         <HorizontalScrollTextLink />
       </div>
       {/* Filter & Sort */}
-      <div className='mx-4 mt-3'></div>
+      <div className='flex justify-between mx-4 mt-3'>
+        <BtnTransparentWithIcon text={"Filter"} />
+        <BtnTransparentWithIcon text={"Sort"} />
+      </div>
+      {/* Food item card */}
+      <div className='mx-4 mt-3'>
+        <FoodItemCardMax />
+        <FoodItemCardMax />
+        <FoodItemCardMax />
+      </div>
+      {/* Other popular Chef's nearby */}
+      <div className='flex mx-4 mt-3'>
+        <img src={ChefProfilePicMedium} alt='' />
+        <img src={ChefProfilePicMedium} alt='' />
+        <img src={ChefProfilePicMedium} alt='' />
+        <img src={ChefProfilePicMedium} alt='' />
+      </div>
     </div>
   );
 };
