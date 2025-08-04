@@ -1,7 +1,7 @@
-const IndicatorDotBrandColor = () => {
+const IndicatorDotBrandColor = ({ value }) => {
   return (
-    <div className='flex justify-center items-center rounded-full size-5 bg-brand-text-dark text-sm'>
-      3
+    <div className='-top-2 right-4 absolute flex justify-center items-center rounded-full size-5 bg-brand-text-dark text-sm'>
+      {value}
     </div>
   );
 };

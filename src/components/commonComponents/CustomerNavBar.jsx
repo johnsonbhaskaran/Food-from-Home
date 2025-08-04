@@ -1,5 +1,6 @@
 import FeatherIcon from "feather-icons-react";
 import { useEffect, useState } from "react";
+import IndicatorDotBrandColor from "./IndicatorDotBrandColor";
 
 const CustomerNavBar = ({ active }) => {
   const [navBarActive, setNavBarActive] = useState(1);
@@ -45,9 +46,10 @@ const CustomerNavBar = ({ active }) => {
         <p className='font-bold text-xs'>Favorites</p>
       </div>
       <div
-        className='flex flex-col items-center gap-y-1 px-1 w-full'
+        className='relative flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle(4)}
       >
+        <IndicatorDotBrandColor value={3} />
         <FeatherIcon
           icon='shopping-bag'
           className={navBarActive === 4 && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
