@@ -19,3 +19,9 @@
   --color-brand-notify-default: #CC4400;
   --color-brand-btn-dark: #411F47;
 }
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
