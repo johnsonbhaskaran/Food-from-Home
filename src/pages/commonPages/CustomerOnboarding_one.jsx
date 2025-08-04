@@ -33,7 +33,7 @@ const CustomerOnboarding_one = () => {
       </div>
       {/* Next button */}
       <div className='mb-16'>
-        <BtnTransparent />
+        <BtnTransparent text={"Next"} />
       </div>
       {/* Carousel Indicators */}
       <div className='mx-auto mb-4'>
