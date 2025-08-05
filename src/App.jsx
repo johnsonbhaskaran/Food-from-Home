@@ -10,15 +10,8 @@ import BtnGradientFilled from "./components/commonComponents/BtnGradientFilled";
 function App() {
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light'>
-      <FoodItemCardMax imgSrc={FoodItemImageMax_1}>
-        <h3 className='font-extrabold text-white text-3xl'>Fish Fry</h3>
-        <div className='flex justify-between'>
-          <BtnTransparent text={"₹ 150 / pcs"} />
-          <BtnGradientFilled value={"Add now"} />
-        </div>
-      </FoodItemCardMax>
-      {/* <ChefStore />
-      <CustomerNavBar active={1} /> */}
+      <ChefStore />
+      <CustomerNavBar active={1} />
     </div>
   );
 }

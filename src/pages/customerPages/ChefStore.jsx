@@ -12,13 +12,13 @@ import FoodItemImageMax_3 from "../../assets/Food-img-3-max.png";
 
 const ChefStore = () => {
   return (
-    <div className='flex flex-col md:mx-auto md:container'>
+    <div className='flex flex-col md:mx-auto md:max-w-7xl'>
       {/* Store Banner section */}
       <div
         style={{ backgroundImage: { ChefProfileBannerMobile } }}
         className='bg-cover bg-center w-full h-56'
       >
-        <div className='flex justify-between items-end mx-4 md:mx-auto p-4 h-full i md:container'>
+        <div className='flex justify-between items-end mx-4 md:mx-auto p-4 md:max-w-4xl h-full'>
           <img src={ChefProfilePicMedium} alt='' />
           <h1 className='font-semibold text-white text-2xl underline underline-offset-2'>
             Revathy’s Kitchen
@@ -44,20 +44,41 @@ const ChefStore = () => {
         <BtnTransparentWithIcon text={"Sort"} />
       </div>
       {/* Food item card */}
-      <div className='mx-4 mt-6'>
-        <FoodItemCardMax imgSrc={FoodItemImageMax_1} text={"text"}>
-          <h3 className='font-extrabold text-white text-3xl'>Fish Fry</h3>
-          <div className='flex justify-between'>
-            <BtnTransparent text={"₹ 150 / pcs"} />
-            <BtnTransparent text={"₹ 150 / pcs"} />
-          </div>
-        </FoodItemCardMax>
-        <FoodItemCardMax imgSrc={FoodItemImageMax_2}>
-          <h3>Kebab</h3>
-        </FoodItemCardMax>
-        <FoodItemCardMax imgSrc={FoodItemImageMax_3}>
-          <h3>Potato Fries</h3>
-        </FoodItemCardMax>
+      <div className='mx-4 md:mx-12 mt-6'>
+        <div className='md:flex md:flex-wrap w-full'>
+          <FoodItemCardMax
+            imgSrc={FoodItemImageMax_1}
+            price={"₹ 150 / pcs"}
+            action={"Add now"}
+            itemName={"Fish Fry"}
+            timeDuration={"25-35 min"}
+            tags={{ one: "fish", two: "marine", three: "exotic", four: "diet", five: "side dish" }}
+          ></FoodItemCardMax>
+          <FoodItemCardMax
+            imgSrc={FoodItemImageMax_2}
+            price={"₹ 150 / pcs"}
+            action={"Add now"}
+            itemName={"Kebab"}
+            timeDuration={"25-35 min"}
+            tags={{ one: "meat", two: "juicy", three: "exotic", four: "diet", five: "side dish" }}
+          ></FoodItemCardMax>
+          <FoodItemCardMax
+            imgSrc={FoodItemImageMax_3}
+            price={"₹ 150 / pcs"}
+            action={"Add now"}
+            itemName={"Potato Fries"}
+            timeDuration={"25-35 min"}
+            tags={{ one: "fries", two: "potato", three: "sauce", four: "hot", five: "crisps" }}
+          ></FoodItemCardMax>
+          <FoodItemCardMax
+            imgSrc={FoodItemImageMax_1}
+            price={"₹ 150 / pcs"}
+            action={"Add now"}
+            itemName={"Fish Fries"}
+            timeDuration={"25-35 min"}
+            tags={{ one: "fish", two: "marine", three: "exotic", four: "diet", five: "side dish" }}
+          ></FoodItemCardMax>
+        </div>
       </div>
       {/* Other popular Chef's nearby */}
       <div className='flex mx-4 mt-6'>
