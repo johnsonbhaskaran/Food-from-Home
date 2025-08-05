@@ -3,7 +3,12 @@ import ChefProfileBannerMobile from "../../assets/store-chef-profile-banner-mobi
 import HorizontalScrollCircularImage from "../../components/commonComponents/HorizontalScrollCircularImage";
 import HorizontalScrollTextLink from "../../components/commonComponents/HorizontalScrollTextLink";
 import BtnTransparentWithIcon from "../../components/commonComponents/BtnTransparentWithIcon";
+import BtnTransparent from "../../components/commonComponents/BtnTransparent";
 import FoodItemCardMax from "../../components/commonComponents/FoodItemCardMax";
+// Food Item Images - Max
+import FoodItemImageMax_1 from "../../assets/Food-img-1-max.png";
+import FoodItemImageMax_2 from "../../assets/Food-img-2-max.png";
+import FoodItemImageMax_3 from "../../assets/Food-img-3-max.png";
 
 const ChefStore = () => {
   return (
@@ -40,9 +45,19 @@ const ChefStore = () => {
       </div>
       {/* Food item card */}
       <div className='mx-4 mt-6'>
-        <FoodItemCardMax imgSrc={ } />
-        <FoodItemCardMax />
-        <FoodItemCardMax />
+        <FoodItemCardMax imgSrc={FoodItemImageMax_1} text={"text"}>
+          <h3 className='font-extrabold text-white text-3xl'>Fish Fry</h3>
+          <div className='flex justify-between'>
+            <BtnTransparent text={"₹ 150 / pcs"} />
+            <BtnTransparent text={"₹ 150 / pcs"} />
+          </div>
+        </FoodItemCardMax>
+        <FoodItemCardMax imgSrc={FoodItemImageMax_2}>
+          <h3>Kebab</h3>
+        </FoodItemCardMax>
+        <FoodItemCardMax imgSrc={FoodItemImageMax_3}>
+          <h3>Potato Fries</h3>
+        </FoodItemCardMax>
       </div>
       {/* Other popular Chef's nearby */}
       <div className='flex mx-4 mt-6'>
