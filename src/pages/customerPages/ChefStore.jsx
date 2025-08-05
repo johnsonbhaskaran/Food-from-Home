@@ -40,7 +40,7 @@ const ChefStore = () => {
       </div>
       {/* Food item card */}
       <div className='mx-4 mt-6'>
-        <FoodItemCardMax />
+        <FoodItemCardMax imgSrc={ } />
         <FoodItemCardMax />
         <FoodItemCardMax />
       </div>
