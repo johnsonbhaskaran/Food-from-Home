@@ -1,4 +1,8 @@
 import ChefProfilePicMedium from "../../assets/store-chef-profile-pic-80px.png";
+import OtherChefPic_1 from "../../assets/other-Chef-1-img.png";
+import OtherChefPic_2 from "../../assets/other-Chef-2-img.png";
+import OtherChefPic_3 from "../../assets/other-Chef-3-img.png";
+import OtherChefPic_4 from "../../assets/other-Chef-4-img.png";
 import ChefProfileBannerMobile from "../../assets/store-chef-profile-banner-mobile.png";
 import HorizontalScrollCircularImage from "../../components/commonComponents/HorizontalScrollCircularImage";
 import HorizontalScrollTextLink from "../../components/commonComponents/HorizontalScrollTextLink";
@@ -81,11 +85,14 @@ const ChefStore = () => {
         </div>
       </div>
       {/* Other popular Chef's nearby */}
-      <div className='flex mx-4 mt-6'>
-        <img src={ChefProfilePicMedium} alt='' />
-        <img src={ChefProfilePicMedium} alt='' />
-        <img src={ChefProfilePicMedium} alt='' />
-        <img src={ChefProfilePicMedium} alt='' />
+      <div className='bg-brand-fore-dark mx-4 mt-6 mb-28 px-4 py-2 rounded-xl'>
+        <h2 className='text-base'>other popular Chef's nearby</h2>
+        <div className='scrollbar-hidden flex gap-x-2 my-2 overflow-x-scroll'>
+          <img src={OtherChefPic_1} alt='' className='rounded-lg' />
+          <img src={OtherChefPic_2} alt='' className='rounded-lg' />
+          <img src={OtherChefPic_3} alt='' className='rounded-lg' />
+          <img src={OtherChefPic_4} alt='' className='rounded-lg' />
+        </div>
       </div>
     </div>
   );
