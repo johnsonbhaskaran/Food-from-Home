@@ -1,9 +1,12 @@
-import FoodItemImageMini_1 from "../../assets/Food-img-1-mini.png";
-import FoodItemImageMini_2 from "../../assets/Food-img-2-mini.png";
-import FoodItemImageMini_3 from "../../assets/Food-img-3-mini.png";
-
-const FoodItemCardMini = () => {
-  return <div>FoodItemCardMini</div>;
+const FoodItemCardMini = ({ imgSrc }) => {
+  return (
+    <div className='relative'>
+      <img src={imgSrc} className='rounded-xl' />
+      <div className='absolute inset-0 flex justify-end items-start'>
+        <div className='bg-brand-fore-dark px-2 rounded-tr-xl'>x</div>
+      </div>
+    </div>
+  );
 };
 
 export default FoodItemCardMini;
