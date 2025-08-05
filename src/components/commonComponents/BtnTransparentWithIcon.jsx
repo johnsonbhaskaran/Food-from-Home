@@ -1,7 +1,12 @@
+import FeatherIcon from "feather-icons-react";
+
 const BtnTransparentWithIcon = ({ text }) => {
   return (
-    <div className='inline bg-brand-btn-dark px-8 py-3 border border-brand-primary rounded-lg font-semibold text-brand-primary text-base cursor-pointer'>
-      {text}
+    <div>
+      <div className='flex items-center gap-x-2 bg-brand-btn-dark px-6 py-2 border border-brand-primary rounded-lg font-semibold text-brand-primary text-base cursor-pointer'>
+        <p>{text}</p>
+        <FeatherIcon icon={text === "Filter" ? "filter" : "grid"} size='18' />
+      </div>
     </div>
   );
 };

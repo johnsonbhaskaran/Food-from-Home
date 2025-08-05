@@ -21,7 +21,7 @@ const ChefStore = () => {
         </div>
       </div>
       {/* Today's special */}
-      <div className='bg-brand-fore-dark mx-4 mt-3 p-4 pr-0 rounded-xl text-center'>
+      <div className='bg-brand-fore-dark mx-4 mt-4 p-4 pr-0 rounded-xl text-center'>
         <h2 className='inline-block bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary mb-4 font-bold text-transparent text-xl sm:text-2xl'>
           Today's special
         </h2>
@@ -30,22 +30,22 @@ const ChefStore = () => {
         </div>
       </div>
       {/* Category selection horizontal scroll text links */}
-      <div className='scrollbar-hidden bg-brand-fore-dark mx-4 mt-3 p-4 rounded-xl overflow-x-auto'>
+      <div className='scrollbar-hidden bg-brand-fore-dark mx-4 mt-6 p-4 rounded-xl overflow-x-auto'>
         <HorizontalScrollTextLink />
       </div>
       {/* Filter & Sort */}
-      <div className='flex justify-between mx-4 mt-3'>
+      <div className='flex justify-between mx-4 mt-6'>
         <BtnTransparentWithIcon text={"Filter"} />
         <BtnTransparentWithIcon text={"Sort"} />
       </div>
       {/* Food item card */}
-      <div className='mx-4 mt-3'>
+      <div className='mx-4 mt-6'>
         <FoodItemCardMax />
         <FoodItemCardMax />
         <FoodItemCardMax />
       </div>
       {/* Other popular Chef's nearby */}
-      <div className='flex mx-4 mt-3'>
+      <div className='flex mx-4 mt-6'>
         <img src={ChefProfilePicMedium} alt='' />
         <img src={ChefProfilePicMedium} alt='' />
         <img src={ChefProfilePicMedium} alt='' />
