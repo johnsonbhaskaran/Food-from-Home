@@ -47,7 +47,6 @@ const CustomerOrderBag = () => {
       </div>
 
       {/* Jumbo CTA button */}
-      {/* <div className='bottom-26 md:bottom-30 fixed flex justify-center items-end h-full'> */}
       <div className='bottom-26 md:bottom-30 absolute inset-x-0 mx-6'>
         <BtnGradientMega text={"Go to Checkout"} quantity={3} price={"₹ 625.00"} />
       </div>

@@ -29,9 +29,7 @@ const DynamicBtnField = ({ children }) => {
               color=''
               className='rounded-full size-6 bg-brand-text-dark'
             />
-            <div className='flex justify-center items-center size-8 bg-brand-text-dark'>
-              {quantity}
-            </div>
+            <div className='flex justify-center items-center size-8'>{quantity}</div>
             <FeatherIcon
               onClick={() => setQuantity((quantity) => quantity + 1)}
               icon='plus'
