@@ -5,7 +5,18 @@ const DynamicBtnField = ({ children }) => {
   const [show, setShow] = useState(false);
   const [quantity, setQuantity] = useState(children);
 
-  useEffect(() => {}, [quantity]);
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(false);
+    }, 5000);
+  }, [show]);
+
+  useEffect(() => {
+    if (quantity < 2) {
+      setShow(false);
+      setQuantity(1);
+    }
+  }, [quantity]);
 
   return (
     <div onClick={() => setShow(true)} className='select-none'>

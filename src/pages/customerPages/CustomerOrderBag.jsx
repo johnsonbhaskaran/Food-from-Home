@@ -29,7 +29,7 @@ const CustomerOrderBag = () => {
             price={"₹ 175 / pack"}
             itemName={"Kebab"}
             itemSize={""}
-            addnInfo={"No additional instruction"}
+            addnInfo={"No instruction"}
             selectQuantity={1}
           />
         </div>
