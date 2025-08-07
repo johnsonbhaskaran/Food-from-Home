@@ -18,16 +18,15 @@ const DynamicBtnField = ({ children }) => {
               color=''
               className='rounded-full size-6 bg-brand-text-dark'
             />
-            {quantity}
+            <div className='flex justify-center items-center size-8 bg-brand-text-dark'>
+              {quantity}
+            </div>
             <FeatherIcon
               onClick={() => setQuantity((quantity) => quantity + 1)}
               icon='plus'
               color=''
               className='rounded-full size-6 bg-brand-text-dark'
             />
-          </div>
-          <div className='px-2'>
-            <FeatherIcon onClick={() => setQuantity(0)} icon='trash' />
           </div>
         </div>
       ) : (
