@@ -83,10 +83,10 @@ const CustomerPayment = () => {
             <InputFieldType2 type={"tel"} value={"Credit card number"} maxLength={19} />
             <div className='flex gap-2'>
               <div className='w-1/2'>
-                <InputFieldType2 type={"tel"} value={"CVV code"} maxLength={4} />
+                <InputFieldType2 type={"number"} value={"CVV code"} maxLength={4} />
               </div>
               <div className='w-1/2'>
-                <InputFieldType2 type={"tel"} value={"Expiry date"} maxLength={5} />
+                <InputFieldType2 type={"number"} value={"MM/YY"} maxLength={5} />
               </div>
             </div>
             <InputFieldType2 type={"text"} value={"Name on card"} maxLength={50} />
