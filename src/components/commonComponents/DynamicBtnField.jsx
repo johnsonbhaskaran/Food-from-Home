@@ -21,7 +21,7 @@ const DynamicBtnField = ({ children }) => {
   return (
     <div onClick={() => setShow(true)} className='select-none'>
       {show ? (
-        <div className='flex items-center border border-b-brand-text-dark rounded min-w-max h-8'>
+        <div className='flex items-center border border-brand-text-dark rounded min-w-max h-8'>
           <div className='flex items-center gap-2 px-2'>
             <FeatherIcon
               onClick={() => setQuantity((quantity) => quantity - 1)}
@@ -41,7 +41,7 @@ const DynamicBtnField = ({ children }) => {
           </div>
         </div>
       ) : (
-        <button className='border border-b-brand-text-dark rounded size-8'>{quantity}</button>
+        <button className='border border-brand-text-dark rounded size-8'>{quantity}</button>
       )}
     </div>
   );

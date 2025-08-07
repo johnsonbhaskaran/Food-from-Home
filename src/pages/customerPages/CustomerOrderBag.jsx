@@ -2,10 +2,11 @@ import OrderListItem from "../../components/commonComponents/OrderListItem";
 import FoodItemImageMini_1 from "../../assets/Food-img-1-mini.png";
 import FoodItemImageMini_2 from "../../assets/Food-img-2-mini.png";
 import FoodItemImageMini_3 from "../../assets/Food-img-3-mini.png";
+import BtnGradientMega from "../../components/commonComponents/BtnGradientMega";
 
 const CustomerOrderBag = () => {
   return (
-    <div className='mx-auto px-4 md:max-w-3xl container'>
+    <div className='relative flex flex-col mx-auto px-4 md:max-w-3xl h-dvh container'>
       {/* Title */}
       <div className='mt-14'>
         <h1 className='font-bold text-3xl text-center'>Your order bag</h1>
@@ -43,6 +44,12 @@ const CustomerOrderBag = () => {
             selectQuantity={3}
           />
         </div>
+      </div>
+
+      {/* Jumbo CTA button */}
+      {/* <div className='bottom-26 md:bottom-30 fixed flex justify-center items-end h-full'> */}
+      <div className='bottom-26 md:bottom-30 absolute inset-x-0 mx-6'>
+        <BtnGradientMega text={"Go to Checkout"} quantity={3} price={"₹ 625.00"} />
       </div>
     </div>
   );
