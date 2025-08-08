@@ -17,52 +17,56 @@ const CustomerNavBar = ({ active }) => {
     <div className='right-0 bottom-0 left-0 z-50 fixed flex items-center gap-x-3 bg-brand-fore-dark shadow-lg mx-auto mb-2 sm:mb-4 md:mb-6 p-4 rounded-4xl max-w-md md:max-w-lg'>
       <div
         className='flex flex-col items-center gap-y-1 px-1 w-full'
-        onClick={() => clickHandle(1)}
+        onClick={() => clickHandle("home")}
       >
         <FeatherIcon
           icon='home'
-          className={navBarActive === 1 && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          className={navBarActive === "home" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
         />
         <p className='font-bold text-xs'>Home</p>
       </div>
       <div
         className='flex flex-col items-center gap-y-1 px-1 w-full'
-        onClick={() => clickHandle(2)}
+        onClick={() => clickHandle("chat")}
       >
         <FeatherIcon
           icon='message-square'
-          className={navBarActive === 2 && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          className={navBarActive === "chat" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
         />
         <p className='font-bold text-xs'>Chat</p>
       </div>
       <div
         className='flex flex-col items-center gap-y-1 px-1 w-full'
-        onClick={() => clickHandle(3)}
+        onClick={() => clickHandle("favorites")}
       >
         <FeatherIcon
           icon='heart'
-          className={navBarActive === 3 && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          className={
+            navBarActive === "favorites" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`
+          }
         />
         <p className='font-bold text-xs'>Favorites</p>
       </div>
       <div
         className='relative flex flex-col items-center gap-y-1 px-1 w-full'
-        onClick={() => clickHandle(4)}
+        onClick={() => clickHandle("bag")}
       >
         <IndicatorDotBrandColor value={3} />
         <FeatherIcon
           icon='shopping-bag'
-          className={navBarActive === 4 && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          className={navBarActive === "bag" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
         />
         <p className='font-bold text-xs'>Bag</p>
       </div>
       <div
         className='flex flex-col items-center gap-y-1 px-1 w-full'
-        onClick={() => clickHandle(5)}
+        onClick={() => clickHandle("settings")}
       >
         <FeatherIcon
           icon='menu'
-          className={navBarActive === 5 && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          className={
+            navBarActive === "settings" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`
+          }
         />
         <p className='font-bold text-xs'>Settings</p>
       </div>

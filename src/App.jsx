@@ -1,12 +1,15 @@
 import "./App.css";
 import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
-import CustomerPaymentSuccessfulPopup from "./pages/customerPages/CustomerPaymentSuccessfulPopup";
+import CustomerSettings from "./pages/customerPages/CustomerSettings";
 
 function App() {
+  const activeNav = ["home", "chat", "favorites", "bag", "settings"];
+  const active = activeNav[4];
+
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light'>
-      <CustomerPaymentSuccessfulPopup />
-      <CustomerNavBar active={4} />
+      <CustomerSettings />
+      <CustomerNavBar active={active} />
     </div>
   );
 }
