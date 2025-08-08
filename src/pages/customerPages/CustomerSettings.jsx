@@ -11,7 +11,7 @@ const CustomerSettings = () => {
     <div className='flex flex-row justify-end items-stretch h-screen'>
       <div onClick={() => setShow(show)} className='flex flex-col bg-brand-fore-dark'>
         {show && (
-          <div className='flex flex-col space-y-4 m-2 mt-16'>
+          <div className='flex flex-col space-y-4 m-2 mt-8'>
             <LogoutBtn />
             <ThemeSelectionBtn />
             <AccountSettingsBtn />

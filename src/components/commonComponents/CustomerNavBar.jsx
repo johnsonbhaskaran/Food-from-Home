@@ -21,7 +21,7 @@ const CustomerNavBar = ({ active }) => {
       >
         <FeatherIcon
           icon='home'
-          className={navBarActive === "home" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          className={navBarActive === "home" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark `}
         />
         <p className='font-bold text-xs'>Home</p>
       </div>

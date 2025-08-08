@@ -1,10 +1,11 @@
 import FeatherIcon from "feather-icons-react";
+import ToggleSwitch from "./ToggleSwitch";
 
 const ThemeSelectionBtn = () => {
   return (
     <button className='flex justify-between items-center gap-2 px-5 py-4 rounded-lg w-xs bg-brand-text-dark'>
       <div className='text-left grow'>Dark Theme</div>
-      <FeatherIcon icon='chevron-down' />
+      <ToggleSwitch isDark={true} />
     </button>
   );
 };
