@@ -1,14 +1,17 @@
 import "./App.css";
 // import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
-import CustomerChatSupport from "./pages/customerPages/CustomerChatSupport";
+import ChefChatSupport from "./pages/chefPages/ChefChatSupport";
 
 function App() {
-  // const activeNav = ["home", "chat", "favorites", "bag", "settings"];
-  // const active = activeNav[4];
+  // const activeNavCus = ["home", "chat", "favorites", "bag", "settings"];
+  // const active = activeNavCus[4];
+
+  // const activeNavChef = ["home", "chat", "favorites", "bag", "settings"];
+  // const active = activeNavChef[4];
 
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light'>
-      <CustomerChatSupport />
+      <ChefChatSupport />
       {/* <CustomerNavBar active={active} /> */}
     </div>
   );

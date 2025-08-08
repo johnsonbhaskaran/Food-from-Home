@@ -9,19 +9,8 @@ import ChatBubbleReceiverLeft from "../../components/commonComponents/ChatBubble
 const CustomerChatSupport = () => {
   const [show, setShow] = useState(false);
 
-  const orderDetails = {
-    order_1: {
-      orderNo: "00123",
-      chefName: "Johnson",
-    },
-    order_2: {
-      orderNo: "00106",
-      chefName: "Samir Pawar",
-    },
-  };
-
   return (
-    <div className='relative flex flex-col mx-auto px-4 md:max-w-3xl h-dvh container'>
+    <div className='relative flex flex-col mx-auto px-4 md:max-w-3xl h-dvh select-none container'>
       {/* Title */}
       <div className='mt-14 mb-10'>
         <h1 className='font-bold text-3xl text-center'>Chat with Chef</h1>
@@ -29,10 +18,7 @@ const CustomerChatSupport = () => {
 
       {/* Select live order Tab Bar */}
       <div className='flex justify-between gap-1 pb-1 border-b border-brand-text-dark'>
-        <TabBtnOutline
-          title={"Chatting with"}
-          chefName={`Chef ${orderDetails.order_2.chefName} (# ${orderDetails.order_2.orderNo})`}
-        />
+        <TabBtnOutline title={"Chatting with"} chefName={`Chef Samir Pawar (# 00106)`} />
         <TabBtnFilled
           onClick={() => setShow(!show)}
           title={"Select Order"}
@@ -59,12 +45,12 @@ const CustomerChatSupport = () => {
       <div className='bottom-0 absolute inset-x-0 p-4 w-full'>
         {/* Chat Bubble container */}
         <ChatBubbleSenderRight
-          title={"ID# 00123 - Chef Samir Pawar"}
+          title={""}
           text={"Already past the delivery time. Why late?"}
           time={"03:23"}
         />
         <ChatBubbleReceiverLeft
-          title={""}
+          title={"ID# 00123 - Chef Samir Pawar"}
           text={
             "Apologies for 5 mins delay in the preparation time. Now the food is ready and it will reach you within 15 mins."
           }
