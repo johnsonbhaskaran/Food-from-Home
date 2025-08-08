@@ -20,7 +20,7 @@ const SidebarDropdownBtn = () => {
       >
         <div className='text-left grow'>Notifications</div>
         <div className='flex flex-none justify-center items-center rounded-full size-5 bg-brand-text-light text-brand-fore-light'>
-          3
+          2
         </div>
         {show ? <FeatherIcon icon='chevron-up' /> : <FeatherIcon icon='chevron-down' />}
       </div>
@@ -29,16 +29,15 @@ const SidebarDropdownBtn = () => {
       {!!show && (
         <div className='flex flex-col gap-2 p-2 border border-t-0 border-brand-text-dark rounded-lg rounded-t-none w-xs'>
           <NotificationOutlineBtn
-            title={"Order ID# 00106"}
-            dotInfo={"on the way"}
+            title={"Customer chat"}
+            dotInfo={"ID# 00123"}
             chevron={"chevron-down"}
           />
           <NotificationOutlineBtn
-            title={"Order ID# 00123"}
-            dotInfo={"perparing"}
+            title={"Payout settled"}
+            dotInfo={"Pay# 564"}
             chevron={"chevron-down"}
           />
-          <NotificationOutlineBtn title={"Chef Chat"} dotInfo={"2"} chevron={"chevron-down"} />
         </div>
       )}
     </button>

@@ -1,7 +1,7 @@
 import "./App.css";
 import ChefNavBar from "./components/commonComponents/ChefNavBar";
+import ChefSettings from "./pages/chefPages/ChefSettings";
 // import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
-import PayoutSettledPopup from "./pages/chefPages/PayoutSettledPopup";
 
 function App() {
   const activeNavCus = ["home", "chat", "favorites", "bag", "settings"];
@@ -12,9 +12,9 @@ function App() {
 
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light'>
-      <PayoutSettledPopup />
-      <ChefNavBar active={active} />
+      <ChefSettings />
       {/* <CustomerNavBar active={active} /> */}
+      <ChefNavBar active={active} />
     </div>
   );
 }
