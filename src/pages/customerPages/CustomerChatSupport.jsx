@@ -59,7 +59,7 @@ const CustomerChatSupport = () => {
       <div className='bottom-0 absolute inset-x-0 p-4 w-full'>
         {/* Chat Bubble container */}
         <ChatBubbleSenderRight
-          title={""}
+          title={"ID# 00123 - Chef Samir Pawar"}
           text={"Already past the delivery time. Why late?"}
           time={"03:23"}
         />
