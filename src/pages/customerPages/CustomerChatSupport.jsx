@@ -2,6 +2,9 @@ import { useState } from "react";
 import TabBtnFilled from "../../components/commonComponents/TabBtnFilled";
 import TabBtnOutline from "../../components/commonComponents/TabBtnOutline";
 import NotificationOutlineBtn from "../../components/commonComponents/NotificationOutlineBtn";
+import ChatInputField from "../../components/commonComponents/ChatInputField";
+import ChatBubbleSenderRight from "../../components/commonComponents/ChatBubbleSenderRight";
+import ChatBubbleReceiverLeft from "../../components/commonComponents/ChatBubbleReceiverLeft";
 
 const CustomerChatSupport = () => {
   const [show, setShow] = useState(false);
@@ -52,6 +55,25 @@ const CustomerChatSupport = () => {
           />
         </div>
       )}
+
+      <div className='bottom-0 absolute inset-x-0 p-4 w-full'>
+        {/* Chat Bubble container */}
+        <ChatBubbleSenderRight
+          title={""}
+          text={"Already past the delivery time. Why late?"}
+          time={"03:23"}
+        />
+        <ChatBubbleReceiverLeft
+          title={""}
+          text={
+            "Apologies for 5 mins delay in the preparation time. Now the food is ready and it will reach you within 15 mins."
+          }
+          time={"03:25"}
+        />
+
+        {/* Chat Input Field */}
+        <ChatInputField />
+      </div>
     </div>
   );
 };
