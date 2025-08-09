@@ -8,6 +8,10 @@ import WeightVolumeInputBtn from "../../components/chefComponents/WeightVolumeIn
 import UploadFileInputField from "../../components/commonComponents/UploadFileInputField";
 import BtnGradientBorder from "../../components/commonComponents/BtnGradientBorder";
 import FoodPictureSmall from "../../assets/food-pic-32px.png";
+import FoodItemImageMini_1 from "../../assets/Food-img-1-mini.png";
+import FoodItemImageMini_2 from "../../assets/Food-img-2-mini.png";
+import FoodItemImageMini_3 from "../../assets/Food-img-3-mini.png";
+import OrderListItem from "../../components/commonComponents/OrderListItem";
 
 const StoreAvailability = () => {
   const [showItemsList, setShowItemsList] = useState(true);
@@ -30,7 +34,41 @@ const StoreAvailability = () => {
             chevron={showItemsList ? "up" : "down"}
           />
         </div>
-        {!!showItemsList && "hi"}
+        {/* Order list items */}
+        {!!showItemsList && (
+          <div className='space-y-2 mt-6'>
+            <div className=''>
+              <OrderListItem
+                imgSrc={FoodItemImageMini_1}
+                price={"₹ 150 / pcs"}
+                itemName={"Fish Fry"}
+                itemSize={"(small)"}
+                addnInfo={"extra cutlery"}
+                selectQuantity={1}
+              />
+            </div>
+            <div className=''>
+              <OrderListItem
+                imgSrc={FoodItemImageMini_2}
+                price={"₹ 175 / pack"}
+                itemName={"Kebab"}
+                itemSize={""}
+                addnInfo={"No instruction"}
+                selectQuantity={1}
+              />
+            </div>
+            <div className=''>
+              <OrderListItem
+                imgSrc={FoodItemImageMini_3}
+                price={"₹ 300 / box"}
+                itemName={"Potato Fries"}
+                itemSize={""}
+                addnInfo={"extra mayonaise"}
+                selectQuantity={3}
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Store Items List */}
@@ -46,15 +84,15 @@ const StoreAvailability = () => {
         </div>
         {!!showAddNewFood && (
           <div className='space-y-2'>
-            <DropdownBtn text={"Category Name"} />
+            <DropdownBtn text={"Category Name"} btnSize={"w-full"} />
             <InputField value={"Food Name"} type={"text"} />
             <InputField value={"Ingredient 1"} type={"text"} />
             <InputField value={"Ingredient 2"} type={"text"} />
             <BtnWithAddIcon text={"Add Ingredient"} />
             <TimeInputBtn text={"Preparation time"} />
-            <div>
-              <WeightVolumeInputBtn />
-              <DropdownBtn text={"Unit"} />
+            <div className='flex gap-2'>
+              <WeightVolumeInputBtn text={"Weight/Volume per item"} />
+              <DropdownBtn text={"Unit"} btnSize={"w-1/3"} />
             </div>
             <InputField value={"Price per item"} type={"text"} />
             <UploadFileInputField
