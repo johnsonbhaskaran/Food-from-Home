@@ -43,7 +43,7 @@ const StoreAvailability = () => {
                 price={"₹ 150 / pcs"}
                 itemName={"Fish Fry"}
                 itemSize={"(small)"}
-                netQuantity={"250ml"}
+                netQuantity={"250 ml"}
                 timeDuration={"25 minutes"}
                 selectQuantity={1}
               />
@@ -54,7 +54,7 @@ const StoreAvailability = () => {
                 price={"₹ 175 / pack"}
                 itemName={"Kebab"}
                 itemSize={""}
-                netQuantity={"120/150gms"}
+                netQuantity={"120-150 gms"}
                 timeDuration={"20 minutes"}
                 selectQuantity={1}
               />

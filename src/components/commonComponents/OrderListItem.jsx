@@ -23,7 +23,7 @@ const OrderListItem = ({
         </div>
       )}
       <div className='flex flex-col justify-center px-1 grow'>
-        <div className='flex items-center gap-1 mb-1'>
+        <div className='flex items-center gap-1 my-0.5'>
           <p className='font-bold'>{itemName}</p>
           <p className='text-xs'>{itemSize}</p>
         </div>
