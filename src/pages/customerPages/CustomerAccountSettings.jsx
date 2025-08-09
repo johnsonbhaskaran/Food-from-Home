@@ -2,6 +2,7 @@ import BtnGradientBorder from "../../components/commonComponents/BtnGradientBord
 import InputField from "../../components/commonComponents/InputField";
 import TextareaField from "../../components/commonComponents/TextareaField";
 import UploadFileInputField from "../../components/commonComponents/UploadFileInputField";
+import CustomerPictureSmall from "../../assets/profile-pic-32px.png";
 
 const CustomerAccountSettings = () => {
   const customer = {
@@ -20,7 +21,11 @@ const CustomerAccountSettings = () => {
         <InputField value={customer.name} type={"text"} />
         <InputField value={"Change Password"} type={"password"} />
         <InputField value={"Contact number"} type={"tel"} />
-        <UploadFileInputField value={"Profile picture"} type={"file"} />
+        <UploadFileInputField
+          value={"Profile picture"}
+          type={"file"}
+          imgSrc={CustomerPictureSmall}
+        />
         <TextareaField value={"Delivery address"} type={"text"} />
       </div>
       <div className='block mx-6 my-4 text-right'>

@@ -2,6 +2,7 @@ import BtnGradientBorder from "../../components/commonComponents/BtnGradientBord
 import InputField from "../../components/commonComponents/InputField";
 import TextareaField from "../../components/commonComponents/TextareaField";
 import UploadFileInputField from "../../components/commonComponents/UploadFileInputField";
+import ChefPictureSmall from "../../assets/chef-pic-32px.png";
 
 const ChefAccountSettings = () => {
   const chef = {
@@ -23,7 +24,7 @@ const ChefAccountSettings = () => {
         <InputField value={"Store Name"} type={"text"} />
         <InputField value={"Store Contact number"} type={"tel"} />
         <InputField value={"Store Availability Timings"} type={"text"} />
-        <UploadFileInputField value={"Store Logo"} type={"file"} />
+        <UploadFileInputField value={"Store Logo"} type={"file"} imgSrc={ChefPictureSmall} />
         <TextareaField value={"Store address"} type={"text"} />
       </div>
       <div className='block mx-6 my-4 text-right'>
