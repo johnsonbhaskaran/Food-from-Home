@@ -1,4 +1,6 @@
 import DropdownBtn from "../../components/commonComponents/DropdownBtn";
+import DropdownTextBtn from "../../components/commonComponents/DropdownTextBtn";
+import InputField from "../../components/commonComponents/InputField";
 
 const StoreAvailability = () => {
   return (
@@ -17,8 +19,15 @@ const StoreAvailability = () => {
       {/* Store Items List */}
 
       {/* Add New Items to Store */}
-      <div className='mx-6 mt-12'>
+      <div className='space-y-2 mx-6 mt-12'>
+        {/* Availability toggle */}
+        <div>
+          <DropdownTextBtn text={"Add Food Items to Store"} chevron={"down"} />
+        </div>
         <DropdownBtn text={"Category Name"} />
+        <InputField value={"Food Name"} type={"text"} />
+        <InputField value={"Ingredient 1"} type={"text"} />
+        <InputField value={"Ingredient 2"} type={"text"} />
       </div>
     </div>
   );
