@@ -1,7 +1,16 @@
 import FeatherIcon from "feather-icons-react";
 import DynamicBtnField from "./DynamicBtnField";
 
-const OrderListItem = ({ imgSrc, itemName, itemSize, price, addnInfo, selectQuantity }) => {
+const OrderListItem = ({
+  imgSrc,
+  itemName,
+  itemSize,
+  price,
+  addnInfo,
+  timeDuration,
+  selectQuantity,
+  netQuantity,
+}) => {
   return (
     <div className='flex justify-between items-stretch gap-2'>
       {imgSrc && (
@@ -13,13 +22,15 @@ const OrderListItem = ({ imgSrc, itemName, itemSize, price, addnInfo, selectQuan
           />
         </div>
       )}
-      <div className='flex flex-col justify-center gap-2 p-2 grow'>
-        <div className='flex items-center gap-1'>
+      <div className='flex flex-col justify-center px-1 grow'>
+        <div className='flex items-center gap-1 mb-1'>
           <p className='font-bold'>{itemName}</p>
           <p className='text-xs'>{itemSize}</p>
         </div>
         <div className='font-medium'>{price}</div>
         <div className='text-sm'>{addnInfo}</div>
+        <div className='text-sm'>{timeDuration}</div>
+        <div className='text-sm'>{netQuantity}</div>
       </div>
       <div className='flex flex-col flex-none justify-between items-end p-2 rounded'>
         <DynamicBtnField>{selectQuantity}</DynamicBtnField>

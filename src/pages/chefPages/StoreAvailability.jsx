@@ -27,23 +27,24 @@ const StoreAvailability = () => {
       {/* Sub Title */}
       <div className='mx-6 mt-12'>
         <p className='text-base'>Update availability</p>
-        <p className='text-xl'>Current Items in Store (2)</p>
-        <div onClick={() => setShowItemsList(!showItemsList)}>
+        {/* <p className='text-xl'>Current Items in Store (2)</p> */}
+        <div onClick={() => setShowItemsList(!showItemsList)} className='mt-2'>
           <DropdownTextBtn
-            text={"Add Food Items to Store"}
+            text={"Current Items in Store (2)"}
             chevron={showItemsList ? "up" : "down"}
           />
         </div>
         {/* Order list items */}
         {!!showItemsList && (
-          <div className='space-y-2 mt-6'>
+          <div className='space-y-4 mt-2'>
             <div className=''>
               <OrderListItem
                 imgSrc={FoodItemImageMini_1}
                 price={"₹ 150 / pcs"}
                 itemName={"Fish Fry"}
                 itemSize={"(small)"}
-                addnInfo={"extra cutlery"}
+                netQuantity={"250ml"}
+                timeDuration={"25 minutes"}
                 selectQuantity={1}
               />
             </div>
@@ -53,18 +54,9 @@ const StoreAvailability = () => {
                 price={"₹ 175 / pack"}
                 itemName={"Kebab"}
                 itemSize={""}
-                addnInfo={"No instruction"}
+                netQuantity={"120/150gms"}
+                timeDuration={"20 minutes"}
                 selectQuantity={1}
-              />
-            </div>
-            <div className=''>
-              <OrderListItem
-                imgSrc={FoodItemImageMini_3}
-                price={"₹ 300 / box"}
-                itemName={"Potato Fries"}
-                itemSize={""}
-                addnInfo={"extra mayonaise"}
-                selectQuantity={3}
               />
             </div>
           </div>
@@ -74,7 +66,7 @@ const StoreAvailability = () => {
       {/* Store Items List */}
 
       {/* Add New Items to Store */}
-      <div className='space-y-2 mx-6 mt-12'>
+      <div className='space-y-2 mx-6 mt-4'>
         {/* Availability toggle */}
         <div onClick={() => setShowAddNewFood(!showAddNewFood)}>
           <DropdownTextBtn

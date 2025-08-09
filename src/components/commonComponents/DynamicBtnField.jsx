@@ -2,7 +2,7 @@ import FeatherIcon from "feather-icons-react";
 import { useEffect, useState } from "react";
 
 const DynamicBtnField = ({ children }) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [quantity, setQuantity] = useState(children);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const DynamicBtnField = ({ children }) => {
     <div onClick={() => setShow(true)} className='select-none'>
       {show ? (
         <div className='flex items-center border border-brand-text-dark rounded min-w-max h-8'>
-          <div className='flex items-center gap-2 px-2'>
+          <div className='flex items-center px-2'>
             <FeatherIcon
               onClick={() => setQuantity((quantity) => quantity - 1)}
               icon='minus'

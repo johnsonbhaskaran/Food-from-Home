@@ -1,7 +1,7 @@
 import "./App.css";
 import ChefNavBar from "./components/commonComponents/ChefNavBar";
 import StoreAvailability from "./pages/chefPages/StoreAvailability";
-// import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
+import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
 
 function App() {
   // const activeNavCus = ["home", "chat", "favorites", "bag", "settings"];
