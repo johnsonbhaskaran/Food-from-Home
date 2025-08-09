@@ -3,6 +3,7 @@ import SidebarDropdownBtn from "../../components/commonComponents/SidebarDropdow
 import AccountSettingsBtn from "../../components/commonComponents/AccountSettingsBtn";
 import ThemeSelectionBtn from "../../components/commonComponents/ThemeSelectionBtn";
 import LogoutBtn from "../../components/commonComponents/LogoutBtn";
+import StoreOpenToggleBtn from "../../components/chefComponents/StoreOpenToggleBtn";
 
 const ChefSettings = () => {
   const [show, setShow] = useState(true);
@@ -15,6 +16,7 @@ const ChefSettings = () => {
             <LogoutBtn />
             <ThemeSelectionBtn />
             <AccountSettingsBtn />
+            <StoreOpenToggleBtn />
             <SidebarDropdownBtn />
           </div>
         )}

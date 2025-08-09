@@ -1,6 +1,6 @@
 import "./App.css";
 import ChefNavBar from "./components/commonComponents/ChefNavBar";
-import ChefAccountSettings from "./pages/chefPages/ChefAccountSettings";
+import StoreAvailability from "./pages/chefPages/StoreAvailability";
 // import CustomerNavBar from "./components/commonComponents/CustomerNavBar";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light'>
-      <ChefAccountSettings />
+      <StoreAvailability />
       {/* <CustomerNavBar active={active} /> */}
       <ChefNavBar active={active} />
     </div>
