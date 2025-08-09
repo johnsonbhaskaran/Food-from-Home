@@ -14,9 +14,9 @@ const ChefSettings = () => {
         {show && (
           <div className='flex flex-col space-y-4 m-2 mt-8'>
             <LogoutBtn />
-            <ThemeSelectionBtn />
-            <AccountSettingsBtn />
             <StoreOpenToggleBtn />
+            <AccountSettingsBtn />
+            <ThemeSelectionBtn />
             <SidebarDropdownBtn />
           </div>
         )}

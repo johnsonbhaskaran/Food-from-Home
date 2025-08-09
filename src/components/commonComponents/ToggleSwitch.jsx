@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const ToggleSwitch = ({ isDark }) => {
-  const [enabled, setEnabled] = useState(isDark);
+const ToggleSwitch = ({ isDark, isOpen }) => {
+  const [enabled, setEnabled] = useState(isDark || isOpen);
 
   const handleToggle = () => {
     setEnabled((prev) => !prev);
