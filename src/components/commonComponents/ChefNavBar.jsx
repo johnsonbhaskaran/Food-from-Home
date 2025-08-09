@@ -30,7 +30,7 @@ const ChefNavBar = ({ active }) => {
         onClick={() => clickHandle("availability")}
       >
         <FeatherIcon
-          icon='power'
+          icon='plus-square'
           className={
             navBarActive === "availability" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`
           }

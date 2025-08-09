@@ -50,7 +50,7 @@ const StoreAvailability = () => {
             <InputField value={"Food Name"} type={"text"} />
             <InputField value={"Ingredient 1"} type={"text"} />
             <InputField value={"Ingredient 2"} type={"text"} />
-            <BtnWithAddIcon />
+            <BtnWithAddIcon text={"Add Ingredient"} />
             <TimeInputBtn />
             <div>
               <WeightVolumeInputBtn />
