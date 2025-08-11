@@ -103,7 +103,7 @@ const ChefOrders = () => {
               addnInfo={"extra mayonnaise"}
               selectQuantity={"3"}
               netQuantity={"250 ml"}
-              paymentStatus={"Scheduled for Next cycle"}
+              paymentStatus={"Payout scheduled for Next cycle"}
             />
           </div>
         )}

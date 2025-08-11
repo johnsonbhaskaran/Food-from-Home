@@ -4,6 +4,7 @@ const ChefOrderHistoryTable = ({
   orderId,
   customerName,
   orderValue,
+  orderStatus,
   orderDate,
   orderTime,
   imgSrc,
@@ -13,10 +14,10 @@ const ChefOrderHistoryTable = ({
   addnInfo,
   selectQuantity,
   netQuantity,
-  payoutStatus,
+  paymentStatus,
 }) => {
   return (
-    <div>
+    <div className='border border-brand-text-dark rounded-xl'>
       {/* Table Title bar */}
       <div className='m-2 p-1 rounded-lg bg-brand-text-dark'>
         <div className='flex justify-between text-brand-fore-dark'>
@@ -34,7 +35,7 @@ const ChefOrderHistoryTable = ({
           <div className='flex flex-col text-right grow'>
             <p>{orderDate}</p>
             <p>{orderTime}</p>
-            <p>{payoutStatus}</p>
+            <p>{orderStatus}</p>
           </div>
         </div>
       </div>
@@ -49,7 +50,7 @@ const ChefOrderHistoryTable = ({
           addnInfo={addnInfo}
           selectQuantity={selectQuantity}
           netQuantity={netQuantity}
-          payoutStatus={payoutStatus}
+          paymentStatus={paymentStatus}
         />
       </div>
     </div>

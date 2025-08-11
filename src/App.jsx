@@ -13,7 +13,8 @@ function App() {
 
   return (
     <div className='bg-brand-bg-dark font-urbanist text-brand-text-light select-none'>
-      <YourEarnings />
+      <ChefOrders />
+      {/* <YourEarnings /> */}
       {/* <CustomerNavBar active={active} /> */}
       <ChefNavBar active={active} />
     </div>

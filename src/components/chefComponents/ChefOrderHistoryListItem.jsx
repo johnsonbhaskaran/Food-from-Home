@@ -6,7 +6,7 @@ const ChefOrderHistoryListItem = ({
   addnInfo,
   selectQuantity,
   netQuantity,
-  // payoutStatus,
+  paymentStatus,
 }) => {
   return (
     <div className='flex items-stretch gap-2'>
@@ -33,11 +33,15 @@ const ChefOrderHistoryListItem = ({
             <p className='mt-1'>x {selectQuantity}</p>
           </div>
         </div>
-        <div className='flex justify-end gap-2'>
+        <div className='gap-2'>
           <button
-            className={`px-2 py-1.5 rounded-sm bg-brand-text-dark text-bold text-brand-fore-light text-sm`}
+            className={`text-bold text-brand-fore-light text-sm ${
+              paymentStatus === "Payment settled"
+                ? "text-brand-notify-ON"
+                : "text-brand-warning-Red"
+            }`}
           >
-            view transaction
+            {paymentStatus}
           </button>
         </div>
       </div>
