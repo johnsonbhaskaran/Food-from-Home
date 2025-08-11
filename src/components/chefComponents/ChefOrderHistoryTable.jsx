@@ -4,12 +4,12 @@ import FoodImgMini_1 from "../../assets/Food-img-1-mini.png";
 import FoodImgMini_2 from "../../assets/Food-img-2-mini.png";
 import FoodImgMini_3 from "../../assets/Food-img-3-mini.png";
 
-const ChefOrderListTable = ({
+const ChefOrderHistoryTable = ({
   orderId,
   customerName,
   orderValue,
   orderStatus,
-  timeLeft,
+  orderDate,
   orderTime,
 }) => {
   return (
@@ -29,8 +29,8 @@ const ChefOrderListTable = ({
             </p>
           </div>
           <div className='flex flex-col text-right grow'>
+            <p>{orderDate}</p>
             <p>{orderTime}</p>
-            <p>{timeLeft}</p>
             <p>{orderStatus}</p>
           </div>
         </div>
@@ -44,7 +44,6 @@ const ChefOrderListTable = ({
           itemSize={"(small)"}
           price={"₹ 150.00"}
           addnInfo={"extra cutlery"}
-          timeDuration={"20 mins left"}
           selectQuantity={"1"}
           netQuantity={"120-150 gms"}
         />
@@ -63,4 +62,4 @@ const ChefOrderListTable = ({
     </div>
   );
 };
-export default ChefOrderListTable;
+export default ChefOrderHistoryTable;

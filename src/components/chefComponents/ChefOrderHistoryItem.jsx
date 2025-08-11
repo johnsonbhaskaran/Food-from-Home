@@ -1,4 +1,4 @@
-const ChefOrderListItem = ({
+const ChefOrderHistoryItem = ({
   imgSrc,
   itemName,
   itemSize,
@@ -54,4 +54,4 @@ const ChefOrderListItem = ({
     </div>
   );
 };
-export default ChefOrderListItem;
+export default ChefOrderHistoryItem;
