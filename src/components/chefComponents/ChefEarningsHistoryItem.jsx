@@ -1,4 +1,4 @@
-const ChefEarningsListItem = ({
+const ChefEarningsHistoryItem = ({
   imgSrc,
   itemName,
   itemSize,
@@ -48,4 +48,4 @@ const ChefEarningsListItem = ({
     </div>
   );
 };
-export default ChefEarningsListItem;
+export default ChefEarningsHistoryItem;

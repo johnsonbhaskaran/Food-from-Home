@@ -6,7 +6,6 @@ import FoodImgMini_3 from "../../assets/Food-img-3-mini.png";
 import { useState } from "react";
 
 const YourEarnings = () => {
-  const [isTodayOpen, setIsTodayOpen] = useState(false);
   const [isYesterdayOpen, setIsYesterdayOpen] = useState(false);
   const [isDaysAgoOpen, setIsDaysAgoOpen] = useState(false);
   const [isWeekAgoOpen, setIsWeekAgoOpen] = useState(false);
@@ -23,7 +22,7 @@ const YourEarnings = () => {
       {/* Today's Orders */}
       <div className='mx-6 mt-12'>
         {/* Sub Title */}
-        <p className='text-xl'>Ongoing Orders</p>
+        <p className='text-xl'>Today's Earnings</p>
 
         {/* Order List Table */}
         <div className='mt-6'>
@@ -31,8 +30,8 @@ const YourEarnings = () => {
             orderId={"00123"}
             customerName={"Johnson B"}
             orderValue={"₹ 500.00"}
-            orderStatus={"Not delivered"}
-            timeLeft={"25 mins left"}
+            paymentStatus={"Yet to be settled"}
+            orderDate={"27/07/2025"}
             orderTime={"02:30 pm"}
           />
         </div>
@@ -40,16 +39,18 @@ const YourEarnings = () => {
 
       {/* Order History */}
       <div className='space-y-4 mx-6 mt-12'>
-        <p className='mb-6 text-xl'>Order History</p>
+        <p className='mb-6 text-xl'>Earnings History</p>
+
+        {/* Yesterday */}
         <DropdownBtn
-          onClick={() => setIsTodayOpen(!isTodayOpen)}
-          text={"Today"}
+          text={"Yesterday"}
           btnSize={"w-full"}
-          chevron={`${isTodayOpen ? "up" : "down"}`}
+          chevron={`${isYesterdayOpen ? "up" : "down"}`}
+          onClick={() => setIsYesterdayOpen(!isYesterdayOpen)}
         />
 
         {/* History Table content */}
-        {!!isTodayOpen && (
+        {!!isYesterdayOpen && (
           <div className='space-y-6 border border-brand-text-dark rounded-xl'>
             <ChefOrderHistoryTable
               orderId={"00106"}
@@ -107,14 +108,6 @@ const YourEarnings = () => {
             />
           </div>
         )}
-
-        {/* Yesterday */}
-        <DropdownBtn
-          text={"Yesterday"}
-          btnSize={"w-full"}
-          chevron={`${isYesterdayOpen ? "up" : "down"}`}
-          onClick={() => setIsYesterdayOpen(!isYesterdayOpen)}
-        />
 
         {/* 2 days ago */}
         <DropdownBtn

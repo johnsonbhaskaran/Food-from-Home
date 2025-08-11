@@ -7,9 +7,9 @@ const ChefEarningsListTable = ({
   orderId,
   customerName,
   orderValue,
-  orderStatus,
-  timeLeft,
+  paymentStatus,
   orderTime,
+  orderDate,
 }) => {
   return (
     <div className='border rounded-xl'>
@@ -29,8 +29,8 @@ const ChefEarningsListTable = ({
           </div>
           <div className='flex flex-col text-right grow'>
             <p>{orderTime}</p>
-            <p>{timeLeft}</p>
-            <p>{orderStatus}</p>
+            <p>{orderDate}</p>
+            <p>{paymentStatus}</p>
           </div>
         </div>
       </div>
@@ -43,7 +43,6 @@ const ChefEarningsListTable = ({
           itemSize={"(small)"}
           price={"₹ 150.00"}
           addnInfo={"extra cutlery"}
-          timeDuration={"20 mins left"}
           selectQuantity={"1"}
           netQuantity={"120-150 gms"}
         />
@@ -53,8 +52,6 @@ const ChefEarningsListTable = ({
           itemSize={""}
           price={"₹ 175.00"}
           addnInfo={"Nil"}
-          timeDuration={"-5 mins gone"}
-          isLate={true}
           selectQuantity={"2"}
           netQuantity={"250 ml"}
         />
