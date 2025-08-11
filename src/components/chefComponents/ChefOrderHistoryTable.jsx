@@ -4,7 +4,6 @@ const ChefOrderHistoryTable = ({
   orderId,
   customerName,
   orderValue,
-  orderStatus,
   orderDate,
   orderTime,
   imgSrc,
@@ -14,7 +13,7 @@ const ChefOrderHistoryTable = ({
   addnInfo,
   selectQuantity,
   netQuantity,
-  paymentStatus,
+  payoutStatus,
 }) => {
   return (
     <div>
@@ -35,7 +34,7 @@ const ChefOrderHistoryTable = ({
           <div className='flex flex-col text-right grow'>
             <p>{orderDate}</p>
             <p>{orderTime}</p>
-            <p>{orderStatus}</p>
+            <p>{payoutStatus}</p>
           </div>
         </div>
       </div>
@@ -50,7 +49,7 @@ const ChefOrderHistoryTable = ({
           addnInfo={addnInfo}
           selectQuantity={selectQuantity}
           netQuantity={netQuantity}
-          paymentStatus={paymentStatus}
+          payoutStatus={payoutStatus}
         />
       </div>
     </div>

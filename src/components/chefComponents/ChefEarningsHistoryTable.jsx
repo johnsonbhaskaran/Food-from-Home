@@ -42,7 +42,7 @@ const ChefEarningsHistoryTable = ({
 
       {/* Chef Order List Items */}
       <div className='space-y-2 m-2'>
-        <ChefOrderHistoryListItem
+        <ChefEarningsHistoryListItem
           imgSrc={imgSrc}
           itemName={itemName}
           itemSize={itemSize}

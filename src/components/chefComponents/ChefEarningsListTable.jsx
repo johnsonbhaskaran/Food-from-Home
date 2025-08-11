@@ -6,10 +6,18 @@ import FoodImgMini_3 from "../../assets/Food-img-3-mini.png";
 const ChefEarningsListTable = ({
   orderId,
   customerName,
-  orderValue,
+  yourEarnings,
   paymentStatus,
+  payoutStatus,
   orderTime,
   orderDate,
+  imgSrc,
+  itemName,
+  itemSize,
+  price,
+  addnInfo,
+  selectQuantity,
+  netQuantity,
 }) => {
   return (
     <div className='border rounded-xl'>
@@ -24,12 +32,12 @@ const ChefEarningsListTable = ({
               Customer: <span className='font-bold'>{customerName}</span>
             </p>
             <p>
-              Order value: <span className='font-bold'>{orderValue}</span>
+              Your Earnings: <span className='font-bold'>{yourEarnings}</span>
             </p>
           </div>
           <div className='flex flex-col text-right grow'>
-            <p>{orderTime}</p>
             <p>{orderDate}</p>
+            <p>{orderTime}</p>
             <p>{paymentStatus}</p>
           </div>
         </div>
@@ -38,22 +46,14 @@ const ChefEarningsListTable = ({
       {/* Chef Earnings List Items */}
       <div className='space-y-2 m-2'>
         <ChefEarningsListItem
-          imgSrc={FoodImgMini_1}
-          itemName={"Fish Fry"}
-          itemSize={"(small)"}
-          price={"₹ 150.00"}
-          addnInfo={"extra cutlery"}
-          selectQuantity={"1"}
-          netQuantity={"120-150 gms"}
-        />
-        <ChefEarningsListItem
-          imgSrc={FoodImgMini_2}
-          itemName={"Kebab"}
-          itemSize={""}
-          price={"₹ 175.00"}
-          addnInfo={"Nil"}
-          selectQuantity={"2"}
-          netQuantity={"250 ml"}
+          imgSrc={imgSrc}
+          itemName={itemName}
+          itemSize={itemSize}
+          price={price}
+          addnInfo={addnInfo}
+          selectQuantity={selectQuantity}
+          netQuantity={netQuantity}
+          payoutStatus={payoutStatus}
         />
       </div>
     </div>

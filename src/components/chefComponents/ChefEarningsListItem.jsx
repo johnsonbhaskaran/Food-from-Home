@@ -6,7 +6,7 @@ const ChefEarningsListItem = ({
   addnInfo,
   selectQuantity,
   netQuantity,
-  paymentStatus,
+  payoutStatus,
 }) => {
   return (
     <div className='flex items-stretch gap-2'>
@@ -33,16 +33,16 @@ const ChefEarningsListItem = ({
             <p className='mt-1'>x {selectQuantity}</p>
           </div>
         </div>
-        <div className='flex items-center gap-2'>
-          <p
-            className={`font-semibold  ${
-              paymentStatus === "Payment settled"
-                ? "text-brand-notify-ON"
-                : "text-brand-warning-Red"
-            }`}
+        <div className='flex justify-end gap-2'>
+          <button
+            className={`px-2 py-1.5 rounded-sm bg-brand-text-dark text-bold ${
+              payoutStatus === "requested payout"
+                ? "text-brand-warning-Red"
+                : "text-brand-notify-ON"
+            } text-sm`}
           >
-            {paymentStatus}
-          </p>
+            {payoutStatus}
+          </button>
         </div>
       </div>
     </div>
