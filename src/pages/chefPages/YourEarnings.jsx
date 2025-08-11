@@ -1,5 +1,5 @@
 import ChefOrderHistoryTable from "../../components/chefComponents/ChefOrderHistoryTable";
-import ChefOrderListTable from "../../components/chefComponents/ChefOrderListTable";
+import ChefEarningsListTable from "../../components/chefComponents/ChefEarningsListTable";
 import DropdownBtn from "../../components/commonComponents/DropdownBtn";
 import FoodImgMini_2 from "../../assets/Food-img-2-mini.png";
 import FoodImgMini_3 from "../../assets/Food-img-3-mini.png";
@@ -17,7 +17,7 @@ const YourEarnings = () => {
     <div className='mx-auto mb-36 md:max-w-lg container'>
       {/* Title */}
       <div className='mt-14'>
-        <h1 className='font-bold text-2xl text-center'>Orders Hub</h1>
+        <h1 className='font-bold text-2xl text-center'>Your Earnings</h1>
       </div>
 
       {/* Today's Orders */}
@@ -27,7 +27,7 @@ const YourEarnings = () => {
 
         {/* Order List Table */}
         <div className='mt-6'>
-          <ChefOrderListTable
+          <ChefEarningsListTable
             orderId={"00123"}
             customerName={"Johnson B"}
             orderValue={"₹ 500.00"}
