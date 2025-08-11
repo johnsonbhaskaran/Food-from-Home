@@ -156,7 +156,7 @@ const YourEarnings = () => {
         />
       </div>
       {/* Jumbo CTA button */}
-      <div className='bottom-28 md:bottom-30 fixed inset-x-0 mx-6'>
+      <div className='bottom-28 md:bottom-30 fixed inset-x-0 mx-6 md:mx-auto md:max-w-lg'>
         <BtnGradientMega text={"Withdraw Payout"} quantity={3} price={"₹ 240.00"} />
       </div>
     </div>
