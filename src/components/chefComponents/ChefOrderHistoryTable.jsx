@@ -17,7 +17,7 @@ const ChefOrderHistoryTable = ({
   paymentStatus,
 }) => {
   return (
-    <div className='border border-brand-text-dark rounded-xl'>
+    <div className=''>
       {/* Table Title bar */}
       <div className='m-2 p-1 rounded-lg bg-brand-text-dark'>
         <div className='flex justify-between text-brand-fore-dark'>
