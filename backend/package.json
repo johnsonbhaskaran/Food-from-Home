@@ -1,0 +1,28 @@
+{
+  "name": "ffh-backend",
+  "version": "1.0.0",
+  "description": "FOOD from HOME backend. comprises of JS frameworks such as Node JS, Express JS, Mongo DB for the database.",
+  "keywords": [
+    "MERN app",
+    "MERN Project",
+    "Full stack",
+    "Express",
+    "Node",
+    "JS",
+    "JavaScript"
+  ],
+  "license": "ISC",
+  "author": "Johnson Bhaskaran",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "server": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.2"
+  }
+}
