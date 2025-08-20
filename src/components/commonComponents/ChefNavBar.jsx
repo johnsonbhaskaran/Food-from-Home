@@ -1,6 +1,7 @@
 import FeatherIcon from "feather-icons-react";
 import { useEffect, useState } from "react";
 import IndicatorDotBrandColor from "./IndicatorDotBrandColor";
+import { Link } from "react-router-dom";
 
 const ChefNavBar = ({ active }) => {
   const [navBarActive, setNavBarActive] = useState(active);
@@ -15,16 +16,19 @@ const ChefNavBar = ({ active }) => {
 
   return (
     <div className='right-0 bottom-0 left-0 z-50 fixed flex items-center gap-x-3 bg-brand-fore-dark shadow-lg mx-auto mb-2 sm:mb-4 md:mb-6 p-4 rounded-4xl max-w-md md:max-w-lg'>
-      <div
-        className='flex flex-col items-center gap-y-1 px-1 w-full'
-        onClick={() => clickHandle("chat")}
-      >
-        <FeatherIcon
-          icon='message-square'
-          className={navBarActive === "chat" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
-        />
-        <p className='font-bold text-xs'>Chat</p>
-      </div>
+      {/* // Chat NavLink */}
+      <Link to='/chat-chef'>
+        <div
+          className='flex flex-col items-center gap-y-1 px-1 w-full'
+          onClick={() => clickHandle("chat")}
+        >
+          <FeatherIcon
+            icon='message-square'
+            className={navBarActive === "chat" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          />
+          <p className='font-bold text-xs'>Chat</p>
+        </div>
+      </Link>
       <div
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("availability")}
