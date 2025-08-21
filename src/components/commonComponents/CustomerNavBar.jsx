@@ -1,6 +1,7 @@
 import FeatherIcon from "feather-icons-react";
 import { useEffect, useState } from "react";
 import IndicatorDotBrandColor from "./IndicatorDotBrandColor";
+import { Link } from "react-router-dom";
 
 const CustomerNavBar = ({ active }) => {
   const [navBarActive, setNavBarActive] = useState(1);
@@ -15,7 +16,8 @@ const CustomerNavBar = ({ active }) => {
 
   return (
     <div className='right-0 bottom-0 left-0 z-50 fixed flex items-center gap-x-3 bg-brand-fore-dark shadow-lg mx-auto mb-2 sm:mb-4 md:mb-6 p-4 rounded-4xl max-w-md md:max-w-lg'>
-      <div
+      <Link
+        to='/home-customer'
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("home")}
       >
@@ -24,8 +26,9 @@ const CustomerNavBar = ({ active }) => {
           className={navBarActive === "home" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark `}
         />
         <p className='font-bold text-xs'>Home</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        to='/chat-customer'
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("chat")}
       >
@@ -34,8 +37,9 @@ const CustomerNavBar = ({ active }) => {
           className={navBarActive === "chat" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
         />
         <p className='font-bold text-xs'>Chat</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        to='/favorites'
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("favorites")}
       >
@@ -46,8 +50,9 @@ const CustomerNavBar = ({ active }) => {
           }
         />
         <p className='font-bold text-xs'>Favorites</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        to='/bag'
         className='relative flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("bag")}
       >
@@ -57,8 +62,9 @@ const CustomerNavBar = ({ active }) => {
           className={navBarActive === "bag" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
         />
         <p className='font-bold text-xs'>Bag</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        to='/settings-customer'
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("settings")}
       >
@@ -69,7 +75,7 @@ const CustomerNavBar = ({ active }) => {
           }
         />
         <p className='font-bold text-xs'>Settings</p>
-      </div>
+      </Link>
     </div>
   );
 };

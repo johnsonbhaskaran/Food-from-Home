@@ -28,11 +28,7 @@ const SidebarDropdownBtn = () => {
       {/* Dropdown - Chat & real time order tracking */}
       {!!show && (
         <div className='flex flex-col gap-2 p-2 border border-t-0 border-brand-text-dark rounded-lg rounded-t-none w-xs'>
-          <NotificationOutlineBtn
-            title={"Customer chat"}
-            dotInfo={"ID# 00123"}
-            chevron={"chevron-down"}
-          />
+          <NotificationOutlineBtn title={"Chat"} dotInfo={"ID# 00123"} chevron={"chevron-down"} />
           <NotificationOutlineBtn
             title={"Payout settled"}
             dotInfo={"Pay# 564"}

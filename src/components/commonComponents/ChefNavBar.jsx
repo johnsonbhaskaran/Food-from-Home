@@ -17,19 +17,19 @@ const ChefNavBar = ({ active }) => {
   return (
     <div className='right-0 bottom-0 left-0 z-50 fixed flex items-center gap-x-3 bg-brand-fore-dark shadow-lg mx-auto mb-2 sm:mb-4 md:mb-6 p-4 rounded-4xl max-w-md md:max-w-lg'>
       {/* // Chat NavLink */}
-      <Link to='/chat-chef'>
-        <div
-          className='flex flex-col items-center gap-y-1 px-1 w-full'
-          onClick={() => clickHandle("chat")}
-        >
-          <FeatherIcon
-            icon='message-square'
-            className={navBarActive === "chat" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
-          />
-          <p className='font-bold text-xs'>Chat</p>
-        </div>
+      <Link
+        to='/chat-chef'
+        className='flex flex-col items-center gap-y-1 px-1 w-full'
+        onClick={() => clickHandle("chat")}
+      >
+        <FeatherIcon
+          icon='message-square'
+          className={navBarActive === "chat" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+        />
+        <p className='font-bold text-xs'>Chat</p>
       </Link>
-      <div
+      <Link
+        to='/availability'
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("availability")}
       >
@@ -40,8 +40,9 @@ const ChefNavBar = ({ active }) => {
           }
         />
         <p className='font-bold text-xs'>Availability</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        to='/home-chef'
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("orders")}
       >
@@ -50,19 +51,23 @@ const ChefNavBar = ({ active }) => {
           className={navBarActive === "orders" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
         />
         <p className='font-bold text-xs'>Orders</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        to='/earnings'
         className='relative flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("payout")}
       >
         <IndicatorDotBrandColor value={3} />
         <FeatherIcon
           icon='briefcase'
-          className={navBarActive === "payout" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`}
+          className={
+            navBarActive === "earnings" && `py-1 rounded-4xl w-full h-8 bg-brand-text-dark`
+          }
         />
         <p className='font-bold text-xs'>Payout</p>
-      </div>
-      <div
+      </Link>
+      <Link
+        to='/settings-chef'
         className='flex flex-col items-center gap-y-1 px-1 w-full'
         onClick={() => clickHandle("settings")}
       >
@@ -73,7 +78,7 @@ const ChefNavBar = ({ active }) => {
           }
         />
         <p className='font-bold text-xs'>Settings</p>
-      </div>
+      </Link>
     </div>
   );
 };
