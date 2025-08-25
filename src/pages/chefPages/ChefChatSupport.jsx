@@ -17,7 +17,7 @@ const ChefChatSupport = () => {
       </div>
 
       {/* Select live order Tab Bar */}
-      <div className='flex justify-between gap-1 pb-1 border-b border-brand-text-dark'>
+      <div className='z-50 flex justify-between gap-1 pb-1 border-b border-brand-text-dark'>
         <TabBtnOutline title={"Chatting with"} orderID={"ID# 00123"} />
         <TabBtnFilled
           onClick={() => setShow(!show)}
@@ -28,7 +28,7 @@ const ChefChatSupport = () => {
 
       {/* Dropdown - Live Order ID# selection */}
       {!!show && (
-        <div className='flex flex-col gap-2 bg-brand-fore-dark ms-auto p-2 border border-t-0 border-brand-text-dark rounded-lg rounded-t-none w-xs'>
+        <div className='z-10 flex flex-col gap-2 bg-brand-fore-dark ms-auto p-2 border border-t-0 border-brand-text-dark rounded-lg rounded-t-none w-xs'>
           <NotificationOutlineBtn
             title={"Order ID# 00106"}
             dotInfo={"10 mins left"}
@@ -42,7 +42,7 @@ const ChefChatSupport = () => {
         </div>
       )}
 
-      <div className='bottom-0 absolute inset-x-0 p-4 w-full'>
+      <div className='bottom-26 z-0 absolute inset-x-0 p-4 w-full'>
         {/* Chat Bubble container */}
         <ChatBubbleReceiverLeft
           title={"ID# 00123 - Johnson"}

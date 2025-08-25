@@ -28,7 +28,7 @@ const CustomerChatSupport = () => {
 
       {/* Dropdown - Live Order selection */}
       {!!show && (
-        <div className='flex flex-col gap-2 bg-brand-fore-dark ms-auto p-2 border border-t-0 border-brand-text-dark rounded-lg rounded-t-none w-xs'>
+        <div className='z-10 flex flex-col gap-2 bg-brand-fore-dark ms-auto p-2 border border-t-0 border-brand-text-dark rounded-lg rounded-t-none w-xs'>
           <NotificationOutlineBtn
             title={"Order ID# 00106"}
             dotInfo={"on the way"}
@@ -42,7 +42,7 @@ const CustomerChatSupport = () => {
         </div>
       )}
 
-      <div className='bottom-0 absolute inset-x-0 p-4 w-full'>
+      <div className='bottom-26 absolute inset-x-0 p-4 w-full'>
         {/* Chat Bubble container */}
         <ChatBubbleSenderRight
           title={""}
