@@ -16,7 +16,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "server": "node --watch server.js"
+    "backend": "node --watch server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
