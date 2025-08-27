@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
-const customerPaymentSchema = new mongoose.Schema({});
+const chefPaymentSchema = new mongoose.Schema({});
 
-export const CustomerPayment = mongoose.model("CustomerPayment", customerPaymentSchema);
+export const ChefPayment = mongoose.model("ChefPayment", chefPaymentSchema);
 
 /* -----------------------------------------------------------------/
-                    ** CustomerPayment
+                    ** ChefPayment
                    date, type, status, amount, transactionID, orderID
 /------------------------------------------------------------------*/
