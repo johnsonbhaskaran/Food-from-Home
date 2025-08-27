@@ -6,5 +6,5 @@ export const Chef = mongoose.model("Chef", chefSchema);
 
 /* -----------------------------------------------------------------/
                     ** CHEF
-                   fullname, password, email, phone, profileImage, storeName, completedOrders, pendingOrders, onGoingOrders, earnings [today, total]
+                   fullname, password, email, phone, profileImage, store, speciality
 /------------------------------------------------------------------*/

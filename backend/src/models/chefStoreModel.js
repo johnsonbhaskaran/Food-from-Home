@@ -6,5 +6,5 @@ export const ChefStore = mongoose.model("ChefStore", chefStoreSchema);
 
 /* -----------------------------------------------------------------/
                     **STORE
-                   name, zone, profileImage, bannerImage, description, additionalInfo, speciality, totalSalesCount, todaysSalesCount, location, address, popularityRank, trendingScore, todaysSpecial, tags
+                   name, chef, zone, foodList, discount, bannerImage, description, additionalInfo, salesCount [today, total], location, address, popularityRank, trendingScore, todaysSpecial, tags, isStoreOpen, openTimings, completedOrders, pendingOrders, onGoingOrders, earnings [today, total], payout [pending, history],
 /------------------------------------------------------------------*/
