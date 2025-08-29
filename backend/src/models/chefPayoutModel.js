@@ -8,7 +8,7 @@ const chefPayoutSchema = new mongoose.Schema(
       status: { type: String, enum: ["pending", "cancelled", "completed", "scheduled"] },
       amount: Number,
       transactionID: String,
-      orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
+      orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBag" },
     },
   },
   { timestamps: true }
