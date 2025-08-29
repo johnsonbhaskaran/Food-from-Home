@@ -8,7 +8,7 @@ const chatSchema = new mongoose.Schema(
         dateTime: { type: Date, required: true, default: Date.now },
         readReciept: { type: Boolean },
         storeID: { type: mongoose.Schema.Types.ObjectId, ref: "Store" },
-        orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
+        orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBag" },
       },
     ],
     chef: [
@@ -17,7 +17,7 @@ const chatSchema = new mongoose.Schema(
         dateTime: { type: Date, required: true, default: Date.now },
         readReciept: Boolean,
         customerID: { type: mongoose.Schema.Types.ObjectId, ref: "Customer" },
-        orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
+        orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBag" },
       },
     ],
   },
