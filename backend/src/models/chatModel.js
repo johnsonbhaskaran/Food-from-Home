@@ -1,25 +1,28 @@
 import mongoose from "mongoose";
 
-const chatSchema = new mongoose.Schema({
-  customer: [
-    {
-      messageContent: { type: String, default: "" },
-      dateTime: { type: Date, required: true, default: Date.now },
-      readReciept: { type: Boolean },
-      storeID: { type: mongoose.Schema.Types.ObjectId, ref: "Store" },
-      orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
-    },
-  ],
-  chef: [
-    {
-      messageContent: { type: String, default: "" },
-      dateTime: { type: Date, required: true, default: Date.now },
-      readReciept: Boolean,
-      customerID: { type: mongoose.Schema.Types.ObjectId, ref: "Customer" },
-      orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
-    },
-  ],
-});
+const chatSchema = new mongoose.Schema(
+  {
+    customer: [
+      {
+        messageContent: { type: String, default: "" },
+        dateTime: { type: Date, required: true, default: Date.now },
+        readReciept: { type: Boolean },
+        storeID: { type: mongoose.Schema.Types.ObjectId, ref: "Store" },
+        orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
+      },
+    ],
+    chef: [
+      {
+        messageContent: { type: String, default: "" },
+        dateTime: { type: Date, required: true, default: Date.now },
+        readReciept: Boolean,
+        customerID: { type: mongoose.Schema.Types.ObjectId, ref: "Customer" },
+        orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
+      },
+    ],
+  },
+  { timestamps: true }
+);
 
 export const Chat = mongoose.model("Chat", chatSchema);
 

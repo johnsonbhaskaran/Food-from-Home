@@ -1,15 +1,18 @@
 import mongoose from "mongoose";
 
-const chefPayoutSchema = new mongoose.Schema({
-  payout: {
-    date: { type: Date, required: true, default: Date.now },
-    type: String,
-    status: { type: String, enum: ["pending", "cancelled", "completed", "scheduled"] },
-    amount: Number,
-    transactionID: String,
-    orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
+const chefPayoutSchema = new mongoose.Schema(
+  {
+    payout: {
+      date: { type: Date, required: true, default: Date.now },
+      type: String,
+      status: { type: String, enum: ["pending", "cancelled", "completed", "scheduled"] },
+      amount: Number,
+      transactionID: String,
+      orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBagID" },
+    },
   },
-});
+  { timestamps: true }
+);
 
 export const ChefPayout = mongoose.model("ChefPayout", chefPayoutSchema);
 
