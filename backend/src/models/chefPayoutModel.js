@@ -5,7 +5,12 @@ const chefPayoutSchema = new mongoose.Schema(
     payout: {
       date: { type: Date, required: true, default: Date.now },
       type: String,
-      status: { type: String, enum: ["pending", "cancelled", "completed", "scheduled"] },
+      status: {
+        type: String,
+        enum: ["processing", "pending", "cancelled", "completed", "scheduled"],
+        required: true,
+        default: "processing",
+      },
       amount: Number,
       transactionID: String,
       orderID: { type: mongoose.Schema.Types.ObjectId, ref: "orderBag" },
