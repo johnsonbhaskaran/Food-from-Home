@@ -4,7 +4,8 @@ const customerPaymentSchema = new mongoose.Schema(
   {
     payment: {
       date: { type: Date, required: true, default: Date.now },
-      time: { type: String, required: true }, // Extract time from full datetime.
+      time: { type: String, required: true }, // TODO Extract time from full datetime.
+      mode: { type: String, enum: ["upi", "credit", "cod"], required: true },
       status: {
         type: String,
         enum: ["processing", "pending", "cancelled", "completed", "scheduled"],
@@ -23,5 +24,5 @@ export const CustomerPayment = mongoose.model("CustomerPayment", customerPayment
 
 /* -----------------------------------------------------------------/
                     ** CustomerPayment
-                   date, type, status, amount, transactionID, orderID
+                   date, mode, type, status, amount, transactionID, orderID
 /------------------------------------------------------------------*/
