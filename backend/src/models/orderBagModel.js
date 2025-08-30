@@ -1,6 +1,6 @@
-import mongoose, { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 
-const orderBagSchema = new mongoose.Schema(
+const orderBagSchema = new Schema(
   {
     order: {
       _id: String,
@@ -29,7 +29,7 @@ const orderBagSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export const OrderBag = mongoose.model("OrderBag", orderBagSchema);
+export const OrderBag = model("OrderBag", orderBagSchema);
 
 /* -----------------------------------------------------------------/
                     ** OrderBag
