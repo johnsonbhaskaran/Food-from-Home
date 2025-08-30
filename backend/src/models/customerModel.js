@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const customerSchema = new mongoose.Schema(
   {
@@ -42,12 +42,12 @@ const customerSchema = new mongoose.Schema(
         longitude: { type: Number, required: true },
       },
       specialty: String,
-      paymentMode: { type: String, enum: ["upi", "credit", "cod"], required: true },
-      orderHistory: [{ item: { type: mongoose.Schema.Types.ObjectId, ref: "OrderBag" } }],
-      paymentHistory: [{ item: { type: mongoose.Schema.Types.ObjectId, ref: "CustomerPayment" } }],
-      chatHistory: [{ item: { type: mongoose.Schema.Types.ObjectId, ref: "Chat" } }],
-      favouriteFoodList: [{ item: { type: mongoose.Schema.Types.ObjectId, ref: "FoodItem" } }],
-      bagList: [{ item: { type: mongoose.Schema.Types.ObjectId, ref: "FoodItem" } }],
+      preferedPaymentMode: { type: String, enum: ["upi", "credit", "cod"], default: "upi" },
+      orderHistory: [{ item: { type: Schema.Types.ObjectId, ref: "OrderBag" } }],
+      paymentHistory: [{ item: { type: Schema.Types.ObjectId, ref: "CustomerPayment" } }],
+      chatHistory: [{ item: { type: Schema.Types.ObjectId, ref: "Chat" } }],
+      favouriteFoodList: [{ item: { type: Schema.Types.ObjectId, ref: "FoodItem" } }],
+      bagList: [{ item: { type: Schema.Types.ObjectId, ref: "FoodItem" } }],
     },
   },
   { timestamps: true }
