@@ -19,6 +19,7 @@ const orderBagSchema = new mongoose.Schema(
               },
             },
           ],
+          customer: { type: Schema.Types.ObjectId, ref: "Customer" },
           orderTime: { type: Date, required: true }, // TODO Buy Now (onClick) => Date.now
           totalPrice: { type: Number, required: true, default: 0 },
         },
@@ -32,5 +33,5 @@ export const OrderBag = mongoose.model("OrderBag", orderBagSchema);
 
 /* -----------------------------------------------------------------/
                     ** OrderBag
-                   storeID, foodItemID, quantity, instruction, orderTime, totalPrice, orderBagID
+                   storeID, foodItemID, quantity, instruction, orderTime, totalPrice, orderBagID, customer
 /------------------------------------------------------------------*/
