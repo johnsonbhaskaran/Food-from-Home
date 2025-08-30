@@ -37,9 +37,12 @@ const customerSchema = new mongoose.Schema(
         },
       },
       location: {
-        zone: { type: Number, required: true },
+        zone: { type: Number, required: true }, // * Pincode
         latitude: { type: Number, required: true },
         longitude: { type: Number, required: true },
+        DIGIPIN: String,
+        plusCodes: String,
+        what3words: String,
       },
       specialty: String,
       preferedPaymentMode: { type: String, enum: ["upi", "credit", "cod"], default: "upi" },

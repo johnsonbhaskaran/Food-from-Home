@@ -22,6 +22,9 @@ const chefStoreSchema = new mongoose.Schema(
         },
         latitude: { type: Number, required: true },
         longitude: { type: Number, required: true },
+        DIGIPIN: String,
+        plusCodes: String,
+        what3words: String,
       },
       address: {
         line1: {
