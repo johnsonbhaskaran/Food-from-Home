@@ -1,10 +1,29 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 
-const zoneSchema = new mongoose.Schema({});
+const zoneSchema = new Schema(
+  {
+    zone: [
+      {
+        PIN: {
+          type: [Number],
+          required: true,
+          validate: {
+            validator: function (v) {
+              return v.every((p) => /^[0-9]{6}$/.test(p.toString()));
+            },
+          },
+        },
+        city: { type: String, required: true },
+        state: { type: String, required: true },
+      },
+    ],
+  },
+  { timestamps: true }
+);
 
-export const Zone = mongoose.model("Zone", zoneSchema);
+export const Zone = model("Zone", zoneSchema);
 
 /* -----------------------------------------------------------------/
                     ** Zone
-                   name [location [lat, long], address [line1, line2, city, state, PIN], DIGIPIN, plusCodes, what3words, zoneCode]
+                   city, state, PIN
 /------------------------------------------------------------------*/
