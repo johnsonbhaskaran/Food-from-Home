@@ -9,10 +9,10 @@ const chefStoreSchema = new mongoose.Schema(
         city: {
           type: String,
           enum: ["chennai", "ahmedabad", "bengaluru", "delhi", "hyderabad", "kolkata", "mumbai"],
-          unique: true,
         },
+        state: String,
         zone: {
-          type: [Number],
+          type: Number,
           required: true,
           validate: {
             validator: function (v) {

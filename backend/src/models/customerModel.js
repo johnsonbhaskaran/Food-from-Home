@@ -18,9 +18,9 @@ const customerSchema = new mongoose.Schema(
           line2: {
             type: String,
           },
-          city: String,
-          state: String,
-          pincode: Number,
+          city: { type: String, required: true },
+          state: { type: String, required: true },
+          pincode: { type: Number, required: true },
           required: true,
         },
         billing: {
@@ -37,9 +37,9 @@ const customerSchema = new mongoose.Schema(
         },
       },
       location: {
-        zone: { type: Number, required: true }, // * Pincode
-        latitude: { type: Number, required: true },
-        longitude: { type: Number, required: true },
+        zone: Number, // * Pincode
+        latitude: Number,
+        longitude: Number,
         DIGIPIN: String,
         plusCodes: String,
         what3words: String,
