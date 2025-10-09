@@ -9,14 +9,31 @@ import HorizontalScrollTextLink from "../../components/commonComponents/Horizont
 import BtnTransparentWithIcon from "../../components/commonComponents/BtnTransparentWithIcon";
 import BtnTransparent from "../../components/commonComponents/BtnTransparent";
 import FoodItemCardMax from "../../components/commonComponents/FoodItemCardMax";
+import FoodItemPopup from "./FoodItemPopup";
+
 // Food Item Images - Max
 import FoodItemImageMax_1 from "../../assets/Food-img-1-max.png";
 import FoodItemImageMax_2 from "../../assets/Food-img-2-max.png";
 import FoodItemImageMax_3 from "../../assets/Food-img-3-max.png";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const ChefStore = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleFoodItem = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div className='flex flex-col md:mx-auto md:max-w-7xl'>
+    <div className='relative flex flex-col md:mx-auto md:max-w-7xl'>
+      {/* //? FoodItemPopup */}
+      {isOpen && <FoodItemPopup close={handleClose} />}
+
       {/* Store Banner section */}
       <div
         style={{ backgroundImage: { ChefProfileBannerMobile } }}
@@ -51,6 +68,7 @@ const ChefStore = () => {
       <div className='mx-4 md:mx-12 mt-6'>
         <div className='md:flex md:flex-wrap w-full'>
           <FoodItemCardMax
+            onClick={handleFoodItem}
             imgSrc={FoodItemImageMax_1}
             price={"₹ 150 / pcs"}
             action={"Add now"}
@@ -59,6 +77,7 @@ const ChefStore = () => {
             tags={{ one: "fish", two: "marine", three: "exotic", four: "diet", five: "side dish" }}
           ></FoodItemCardMax>
           <FoodItemCardMax
+            onClick={handleFoodItem}
             imgSrc={FoodItemImageMax_2}
             price={"₹ 150 / pcs"}
             action={"Add now"}
@@ -67,6 +86,7 @@ const ChefStore = () => {
             tags={{ one: "meat", two: "juicy", three: "exotic", four: "diet", five: "side dish" }}
           ></FoodItemCardMax>
           <FoodItemCardMax
+            onClick={handleFoodItem}
             imgSrc={FoodItemImageMax_3}
             price={"₹ 150 / pcs"}
             action={"Add now"}
@@ -75,6 +95,7 @@ const ChefStore = () => {
             tags={{ one: "fries", two: "potato", three: "sauce", four: "hot", five: "crisps" }}
           ></FoodItemCardMax>
           <FoodItemCardMax
+            onClick={handleFoodItem}
             imgSrc={FoodItemImageMax_1}
             price={"₹ 150 / pcs"}
             action={"Add now"}
