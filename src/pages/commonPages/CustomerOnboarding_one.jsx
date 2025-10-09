@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import OnboardingImageOne_dark from "../../assets/Onboarding-dark-img-1.png";
 import BtnTransparent from "../../components/commonComponents/BtnTransparent";
 import CarouselIndicators from "../../components/commonComponents/CarouselIndicators";
@@ -32,9 +33,9 @@ const CustomerOnboarding_one = () => {
         </p>
       </div>
       {/* Next button */}
-      <div className='mb-16'>
+      <Link to='/onboarding/2' className='mb-16'>
         <BtnTransparent text={"Next"} />
-      </div>
+      </Link>
       {/* Carousel Indicators */}
       <div className='mx-auto mb-4'>
         <CarouselIndicators Onboarding_screen={Onboarding_screen} />

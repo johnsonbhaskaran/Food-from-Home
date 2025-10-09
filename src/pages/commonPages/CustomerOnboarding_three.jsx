@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import OnboardingImage_dark from "../../assets/Onboarding-dark-img-3.png";
 import BtnGradientBorder from "../../components/commonComponents/BtnGradientBorder";
 import BtnTransparent from "../../components/commonComponents/BtnTransparent";
@@ -35,8 +36,12 @@ const CustomerOnboarding_three = () => {
       </div>
       {/* Next button */}
       <div className='flex space-x-4 mx-auto mb-16'>
-        <BtnGradientBorder value={"Sign in"} />
-        <BtnGradientBorder value={"Sign up"} />
+        <Link to='/customer/login'>
+          <BtnGradientBorder value={"Sign in"} />
+        </Link>
+        <Link to='/customer/signup'>
+          <BtnGradientBorder value={"Sign up"} />
+        </Link>
       </div>
       {/* Carousel Indicators */}
       <div className='mx-auto mb-4'>

@@ -3,6 +3,7 @@ import BtnTransparent from "../../components/commonComponents/BtnTransparent";
 import OrderListItem from "../../components/commonComponents/OrderListItem";
 import FoodItemImageMini_1 from "../../assets/Food-img-1-mini.png";
 import FoodItemImageMini_2 from "../../assets/Food-img-2-mini.png";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const orderID = "00123";
@@ -92,9 +93,12 @@ const Checkout = () => {
       </div>
 
       {/* Jumbo CTA button */}
-      <div className='bottom-26 md:bottom-30 sticky inset-x-0 mx-6 md:max-w-2xl'>
+      <Link
+        to='/customer/payment'
+        className='bottom-26 md:bottom-30 sticky inset-x-0 mx-6 md:max-w-2xl'
+      >
         <BtnGradientMega text={"Confirm Order"} quantity={3} price={"₹ 625.00"} />
-      </div>
+      </Link>
     </div>
   );
 };

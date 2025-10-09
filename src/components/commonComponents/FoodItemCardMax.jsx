@@ -3,9 +3,10 @@ import BtnGradientFilled from "./BtnGradientFilled";
 import BtnTransparent from "./BtnTransparent";
 import { useState } from "react";
 import PillBtn from "./PillBtn";
+import { Link } from "react-router-dom";
 
 const FoodItemCardMax = ({ imgSrc, price, action, itemName, timeDuration, tags }) => {
-  const [isFavorite, setIsFavorite] = useState(true);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const toggleFavs = () => {
     setIsFavorite((prev) => !prev);
@@ -19,10 +20,10 @@ const FoodItemCardMax = ({ imgSrc, price, action, itemName, timeDuration, tags }
         className='group-hover:scale-105 transition-transform duration-400'
       />
       <div className='absolute inset-0 flex flex-col justify-between items-end bg-gradient-to-t from-0% from-black/100 via-30% via-black/60 to-transparent'>
-        {/* Favorite toggle Icon */}
-        <div className='mt-4 mr-4'>
+        {/*? Favorite toggle Icon */}
+        <div className='bg-brand-fore-light/10 mt-4 mr-4 rounded-full'>
           <div
-            onClick={() => toggleFavs()}
+            onClick={toggleFavs}
             className='p-2 border-2 border-brand-primary rounded-full cursor-pointer'
           >
             {isFavorite ? (
@@ -45,7 +46,10 @@ const FoodItemCardMax = ({ imgSrc, price, action, itemName, timeDuration, tags }
           <PillBtn tags={tags} />
           <div className='flex justify-between'>
             <BtnTransparent text={price} />
-            <BtnGradientFilled value={action} />
+
+            <Link to='/customer/orderBag'>
+              <BtnGradientFilled value={action} />
+            </Link>
           </div>
         </div>
       </div>
