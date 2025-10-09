@@ -2,6 +2,7 @@ import Checkbox from "../../components/commonComponents/Checkbox";
 import InputField from "../../components/commonComponents/InputField";
 import BtnGradientBorder from "../../components/commonComponents/BtnGradientBorder";
 import BtnTextLink from "../../components/commonComponents/BtnTextLink";
+import { Link } from "react-router-dom";
 
 const CustomerSignup = () => {
   return (
@@ -13,7 +14,7 @@ const CustomerSignup = () => {
         </h2>
         <span className='text-3xl'>🤗</span>
       </div>
-      <div className='mx-6 md:mx-auto md:min-w-md'>
+      <div className='mx-6 md:mx-auto md:max-w-md'>
         {/* Title */}
         <h1 className='font-extrabold text-2xl text-center'>Sign up for new account</h1>
         {/* Input Fields */}
@@ -29,13 +30,17 @@ const CustomerSignup = () => {
         </div>
         {/* Sign in Btn */}
         <div className='flex justify-end my-6'>
-          <BtnGradientBorder value={"Sign up"} />
+          <Link to='/customer/location'>
+            <BtnGradientBorder value={"Sign up"} />
+          </Link>
         </div>
       </div>
       {/* Text link */}
       <div className='mx-6 md:mx-auto mt-4 mb-8 md:min-w-md'>
         <div className='flex justify-between'>
-          <BtnTextLink text={"Chef Registration"} iconSide={"left"} />
+          <Link to='/chef/signup'>
+            <BtnTextLink text={"Chef Registration"} iconSide={"left"} />
+          </Link>
           <BtnTextLink text={"skip"} iconSide={"right"} />
         </div>
       </div>
