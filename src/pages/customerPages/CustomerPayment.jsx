@@ -2,6 +2,7 @@ import { useState } from "react";
 import BtnGradientMega from "../../components/commonComponents/BtnGradientMega";
 import BtnTransparent from "../../components/commonComponents/BtnTransparent";
 import InputFieldType2 from "../../components/commonComponents/InputFieldType2";
+import { Link } from "react-router-dom";
 
 const CustomerPayment = () => {
   const [showCreditCard, setShowCreditCard] = useState(false);
@@ -102,9 +103,12 @@ const CustomerPayment = () => {
       </div>
 
       {/* Jumbo CTA button */}
-      <div className='bottom-26 md:bottom-30 absolute inset-x-0 mx-6 md:max-w-2xl'>
+      <Link
+        to='/customer/payment/successful'
+        className='bottom-26 md:bottom-30 absolute inset-x-0 mx-6 md:max-w-2xl'
+      >
         <BtnGradientMega text={"Make payment"} quantity={3} price={"₹ 625.00"} />
-      </div>
+      </Link>
     </div>
   );
 };
