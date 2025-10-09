@@ -3,6 +3,7 @@ import FoodItemImageMini_1 from "../../assets/Food-img-1-mini.png";
 import FoodItemImageMini_2 from "../../assets/Food-img-2-mini.png";
 import FoodItemImageMini_3 from "../../assets/Food-img-3-mini.png";
 import BtnGradientMega from "../../components/commonComponents/BtnGradientMega";
+import { Link } from "react-router-dom";
 
 const CustomerOrderBag = () => {
   return (
@@ -47,9 +48,9 @@ const CustomerOrderBag = () => {
       </div>
 
       {/* Jumbo CTA button */}
-      <div className='bottom-26 md:bottom-30 absolute inset-x-0 mx-6'>
+      <Link to='/customer/checkout' className='bottom-26 md:bottom-30 absolute inset-x-0 mx-6'>
         <BtnGradientMega text={"Go to Checkout"} quantity={3} price={"₹ 625.00"} />
-      </div>
+      </Link>
     </div>
   );
 };
