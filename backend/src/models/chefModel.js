@@ -1,10 +1,9 @@
 import mongoose from "mongoose";
-import { ChefStore } from "./chefStoreModel";
+import { ChefStore } from "./chefStoreModel.js";
 
 const chefSchema = new mongoose.Schema(
   {
-    firstname: { type: String, required: true },
-    lastname: { type: String, required: true },
+    username: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
     phone: { type: Number, required: true },
