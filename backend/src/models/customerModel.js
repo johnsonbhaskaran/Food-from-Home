@@ -1,57 +1,52 @@
 import mongoose, { Schema } from "mongoose";
 
-const customerSchema = new mongoose.Schema(
+const customerSchema = new Schema(
   {
-    customer: {
-      firstname: { type: String, required: true },
-      lastname: { type: String, required: true },
-      email: { type: String, required: true },
-      password: { type: String, required: true },
-      phone: { type: Number, required: true },
-      profileImage: String,
-      address: {
-        shipping: {
-          line1: {
-            type: String,
-            required: true,
-          },
-          line2: {
-            type: String,
-          },
-          city: { type: String, required: true },
-          state: { type: String, required: true },
-          pincode: { type: Number, required: true },
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+    password: { type: String, required: true },
+    phone: { type: Number, required: true },
+    profileImage: String,
+    address: {
+      shipping: {
+        line1: {
+          type: String,
           required: true,
         },
-        billing: {
-          line1: {
-            type: String,
-            required: true,
-          },
-          line2: {
-            type: String,
-          },
-          city: String,
-          state: String,
-          pincode: Number,
+        line2: {
+          type: String,
         },
+        city: { type: String, required: true },
+        state: { type: String, required: true },
+        pincode: { type: Number, required: true },
       },
-      location: {
-        zone: Number, // * Pincode
-        latitude: Number,
-        longitude: Number,
-        DIGIPIN: String,
-        plusCodes: String,
-        what3words: String,
+      billing: {
+        line1: {
+          type: String,
+        },
+        line2: {
+          type: String,
+        },
+        city: String,
+        state: String,
+        pincode: Number,
       },
-      specialty: String,
-      preferedPaymentMode: { type: String, enum: ["upi", "credit", "cod"], default: "upi" },
-      orderHistory: [{ item: { type: Schema.Types.ObjectId, ref: "OrderBag" } }],
-      paymentHistory: [{ item: { type: Schema.Types.ObjectId, ref: "CustomerPayment" } }],
-      chatHistory: [{ item: { type: Schema.Types.ObjectId, ref: "Chat" } }],
-      favouriteFoodList: [{ item: { type: Schema.Types.ObjectId, ref: "FoodItem" } }],
-      bagList: [{ item: { type: Schema.Types.ObjectId, ref: "FoodItem" } }],
     },
+    location: {
+      zone: Number, // * Pincode
+      latitude: Number,
+      longitude: Number,
+      DIGIPIN: String,
+      plusCodes: String,
+      what3words: String,
+    },
+    specialty: String,
+    preferedPaymentMode: { type: String, enum: ["upi", "credit", "cod"], default: "upi" },
+    orderHistory: [{ item: { type: Schema.Types.ObjectId, ref: "OrderBag" } }],
+    paymentHistory: [{ item: { type: Schema.Types.ObjectId, ref: "CustomerPayment" } }],
+    chatHistory: [{ item: { type: Schema.Types.ObjectId, ref: "Chat" } }],
+    favouriteFoodList: [{ item: { type: Schema.Types.ObjectId, ref: "FoodItem" } }],
+    bagList: [{ item: { type: Schema.Types.ObjectId, ref: "FoodItem" } }],
   },
   { timestamps: true }
 );
