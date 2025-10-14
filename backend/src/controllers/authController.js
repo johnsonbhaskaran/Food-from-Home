@@ -1,11 +1,13 @@
 /* eslint-disable no-undef */
 import { UserAuth } from "../models/userAuthModel.js";
+import { Customer } from "../models/customerModel.js";
+import { Chef } from "../models/chefModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import "dotenv/config.js";
 
 /* -----------------------------------------------------------------/
-                    * Customer Auth *
+                    * Customer Login *
 /------------------------------------------------------------------*/
 
 const customerLogin = async (req, res) => {
@@ -45,6 +47,10 @@ const customerLogin = async (req, res) => {
   }
 };
 
+/* -----------------------------------------------------------------/
+                    * Customer Register *
+/------------------------------------------------------------------*/
+
 const customerRegister = async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -72,6 +78,8 @@ const customerRegister = async (req, res) => {
   });
   const savedUser = await newCustomer.save();
 
+  await Customer.create({ userAuthId: savedUser._id });
+
   const token = jwt.sign({ id: savedUser._id, isChef: savedUser.isChef }, process.env.JWT_SECRET, {
     expiresIn: "1d",
   });
@@ -84,7 +92,7 @@ const customerRegister = async (req, res) => {
 };
 
 /* -----------------------------------------------------------------/
-                    * Chef Auth *
+                    * Chef Login *
 /------------------------------------------------------------------*/
 
 const chefLogin = async (req, res) => {
@@ -126,6 +134,10 @@ const chefLogin = async (req, res) => {
   }
 };
 
+/* -----------------------------------------------------------------/
+                    * Chef Register *
+/------------------------------------------------------------------*/
+
 const chefRegister = async (req, res) => {
   const { username, email, password, isChef = true } = req.body;
 
@@ -154,6 +166,8 @@ const chefRegister = async (req, res) => {
     isChef,
   });
   const savedChef = await newChef.save();
+
+  await Chef.create({ userAuthId: savedChef._id });
 
   const token = jwt.sign({ id: savedChef._id, isChef: savedChef.isChef }, process.env.JWT_SECRET, {
     expiresIn: "1d",
