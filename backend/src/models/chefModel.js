@@ -1,12 +1,9 @@
 import mongoose from "mongoose";
-import { ChefStore } from "./chefStoreModel.js";
 
 const chefSchema = new mongoose.Schema(
   {
-    username: { type: String, required: true },
-    email: { type: String, required: true },
-    password: { type: String, required: true },
-    phone: { type: Number, required: true },
+    userAuthId: { type: mongoose.Schema.Types.ObjectId, ref: "UserAuth" },
+    phone: Number,
     profileImage: String,
     storeID: { type: mongoose.Schema.Types.ObjectId, ref: "ChefStore" },
     specialty: String,
